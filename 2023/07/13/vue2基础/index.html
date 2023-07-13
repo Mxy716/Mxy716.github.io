@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Mu xingyu">
+    
+    <title>
+        
+            vue2基础 |
+        
+        mxy716
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/logo.svg">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/font/css/fontawesome.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/font/css/regular.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/font/css/solid.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/font/css/brands.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"en","path":"search.json"}
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true},"style":{"primary_color":"#0066cc","logo":"/images/logo.svg","favicon":"/images/logo.svg","avatar":"/images/avatar.svg","font_size":"18px","font_family":null,"hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"header_transparent":true,"background_img":"/images/bg.svg","description":"千里之行始于足下.","font_color":"rgb(0, 102, 204)","hitokoto":true},"scroll":{"progress_bar":true,"percent":true}},"local_search":{"enable":true,"preload":true},"code_copy":{},"code_block":{"tools":{"enable":true,"style":"mac"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":true},"lazyload":{"enable":true},"comment":{"enable":true,"use":"valine","valine":{"appid":"kr4ZAGhMIpUEtmIU8DQWOIYv-gzGzoHsz","appkey":"Bo6FYYL2JmaBdonYYnnGEre4","server_urls":null,"placeholder":"请提出你的问题"},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":true,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":true,"wordcount":true,"min2read":true},"img_align":"left","copyright_info":false},"version":"3.6.1"}
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
+    KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
+    KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original article title","author":"Original article author","link":"Original article link"}
+  </script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <i class="pjax-progress-icon fas fa-circle-notch fa-spin"></i>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/logo.svg">
+                </a>
+            
+            <a class="logo-title" href="/">
+               mxy716
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                关于
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">关于</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation">vue2基础</span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/avatar.svg">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">Mu xingyu</span>
+                            
+                                <span class="author-label">Lv1</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2023-07-13 17:02:28</span>
+        <span class="mobile">2023-07-13 17:02</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2023-07-13 17:03:30</span>
+    </span>
+    
+    
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>2.8k Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>13 Mins</span>
+        </span>
+    
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                
+
+                <p>​         vue是用来构建用户界面的一个渐进式框架</p>
+<blockquote>
+<ol>
+<li>构建用户界面 - 将用户手中的数据通过某种方式,能够呈现出来.</li>
+<li>渐进式 - vue是自底向上的逐层应用,如果体量比较小的,只需要简单的轻量级的插件库即可.如果比较大,可以继续添加另外的插件库.</li>
+</ol>
+</blockquote>
+<hr>
+<blockquote>
+<p>发展史</p>
+<ol>
+<li><em><strong>vue2.x - 入门</strong></em><ul>
+<li>最新稳定版本：2.7.14</li>
+<li>旧版本 - 2.6.x</li>
+</ul>
+</li>
+<li>vue3.x - 趋势</li>
+</ol>
+</blockquote>
+<hr>
+<blockquote>
+<p>vue2中文学习文档 - <a class="link"   target="_blank" rel="noopener" href="https://v2.cn.vuejs.org/" >https://v2.cn.vuejs.org/<i class="fas fa-external-link-alt"></i></a></p>
+<p>下载vue.js</p>
+</blockquote>
+<hr>
+<h2 id="1-vue优点"><a href="#1-vue优点" class="headerlink" title="1. vue优点"></a>1. vue优点</h2><blockquote>
+<p>传统的仍然是使用javascript原生的技术或者使用javascript[简称js]的框架jquery.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">     <span class="comment">//模拟一个data - 动态改变的 - 肯定是来自于db表中的数据</span></span></span><br><span class="line"><span class="language-javascript">     <span class="keyword">let</span> data = <span class="string">&#x27;没有vue&#x27;</span></span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">     <span class="comment">//只能通过js操作dom</span></span></span><br><span class="line"><span class="language-javascript">     <span class="comment">//1. 获取dom元素 - 根据id属性的值来获取</span></span></span><br><span class="line"><span class="language-javascript">     <span class="keyword">let</span> div = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;app&quot;</span>)</span></span><br><span class="line"><span class="language-javascript">     <span class="comment">//2. 调用调用属性  -  访问/设置</span></span></span><br><span class="line"><span class="language-javascript">     div.<span class="property">innerHTML</span>=<span class="string">&quot;hello-&quot;</span>+data</span></span><br><span class="line"><span class="language-javascript"> </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<hr>
+<blockquote>
+<ol>
+<li><p>vue出现解放了程序员用js操作dom的双手</p>
+<p><code>采用的是声明式编码,不再需要js去操作dom了,比较方便</code></p>
+</li>
+<li><p>采用组件化编程的方式.提高组件的复用性</p>
+<img  
+                     lazyload
+                     alt="image"
+                     data-src="E:/20230710/note/yuke-demoy/yuke-vue/yuke-vue-note/imgs/组件式.png"
+                      style="zoom: 33%;" 
+                > 
+</li>
+<li><p>采用的是虚拟DOM+diff算法,复用dom节点,提高效率</p>
+<img  
+                     lazyload
+                     alt="image"
+                     data-src="E:/20230710/note/yuke-demoy/yuke-vue/yuke-vue-note/imgs/Diff.png"
+                      style="zoom:33%;" 
+                ></li>
+</ol>
+</blockquote>
+<h1 id="4-vscode环境"><a href="#4-vscode环境" class="headerlink" title="4. vscode环境"></a>4. vscode环境</h1><blockquote>
+<p>下载地址:<a class="link"   target="_blank" rel="noopener" href="https://code.visualstudio.com/" >https://code.visualstudio.com/<i class="fas fa-external-link-alt"></i></a></p>
+<p>下载必要的插件</p>
+<ol>
+<li><p>open in browser</p>
+<p>本地协议的方式打开html文件</p>
+</li>
+<li><p><strong>Live Server</strong> - 启动一个轻量级的服务器</p>
+<p><strong>使用http协议来请求访问我们的html文件</strong></p>
+</li>
+</ol>
+</blockquote>
+<hr>
+<blockquote>
+<ol>
+<li><p>新建一个文件夹yuke-vue</p>
+<p><code>项目的根目录</code></p>
+</li>
+<li><p>打开vscode - 菜单栏file -  open Folder</p>
+</li>
+<li><p>在项目的根目录下新建一个plugins目录 - 然后将vue.js拷贝进去.</p>
+</li>
+</ol>
+</blockquote>
+<p>–</p>
+<h1 id="5-vue-体验"><a href="#5-vue-体验" class="headerlink" title="5. vue-体验"></a>5. vue-体验</h1><blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"> <span class="comment">&lt;!-- 定义一个div的容器,必须要给定一个唯一的id属性的值</span></span><br><span class="line"><span class="comment">      并且一个页面中只能有一个容器</span></span><br><span class="line"><span class="comment"> --&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">     hello-&#123;&#123;msg&#125;&#125;</span><br><span class="line"> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"> <span class="comment">&lt;!-- 如果页面中存在多个id相同的容器的时候,只有第一个是生效的 --&gt;</span></span><br><span class="line"> <span class="comment">&lt;!-- &lt;div id=&quot;app&quot;&gt;</span></span><br><span class="line"><span class="comment">     hello-&#123;&#123;msg&#125;&#125;</span></span><br><span class="line"><span class="comment"> &lt;/div&gt; --&gt;</span></span><br><span class="line"> </span><br><span class="line"> <span class="comment">&lt;!--   引入vue.js --&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;plugins/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">     <span class="comment">// 定义了一个vue的实例</span></span></span><br><span class="line"><span class="language-javascript">     <span class="comment">// 一个页面只能有唯一的一个vue实例</span></span></span><br><span class="line"><span class="language-javascript">     <span class="comment">// vue实例是对应一个容器,通过el属性来进行绑定的</span></span></span><br><span class="line"><span class="language-javascript">     <span class="keyword">new</span> <span class="title class_">Vue</span>(&#123;</span></span><br><span class="line"><span class="language-javascript">         <span class="attr">el</span>:<span class="string">&#x27;#app&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">         <span class="comment">// 定义的data中的数据,它是可以流向到页面的</span></span></span><br><span class="line"><span class="language-javascript">         <span class="comment">// 并且只要data中数据的改变了,页面都会重新渲染</span></span></span><br><span class="line"><span class="language-javascript">         <span class="attr">data</span>:&#123;</span></span><br><span class="line"><span class="language-javascript">             <span class="attr">msg</span>:<span class="string">&#x27;学习vue&#x27;</span></span></span><br><span class="line"><span class="language-javascript">         &#125;</span></span><br><span class="line"><span class="language-javascript">     &#125;);</span></span><br><span class="line"><span class="language-javascript"> </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>测试**: 开发中的data是动态改变的,模板中使用到该数据的地方都会重新渲染** - 为什么data数据要交给vue实例来管理.</p>
+</blockquote>
+<hr>
+<p>总结:</p>
+<ol>
+<li>一个页面中如果出现多个相同容器,一个vue实例的时候,默认是第一个容器是渲染成功的.</li>
+<li>一个容器应该只对应vue实例</li>
+<li>vue实例的el属性值对应容器的id属性值</li>
+<li>中的xxx是一个js表达式,也可以是**vue实例上的东西**
+<ul>
+<li>js表达式 - 是可以产生具体的值的  1+2</li>
+<li>js代码 - if语句,while语句</li>
+<li>js表达式也是一种特殊的js代码</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h1 id="6-vscode中设置一下代码的片段"><a href="#6-vscode中设置一下代码的片段" class="headerlink" title="6. vscode中设置一下代码的片段"></a>6. vscode中设置一下代码的片段</h1><blockquote>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">&quot;Print to console&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">		<span class="attr">&quot;scope&quot;</span><span class="punctuation">:</span> <span class="string">&quot;javascript,typescript&quot;</span><span class="punctuation">,</span></span><br><span class="line">		<span class="attr">&quot;prefix&quot;</span><span class="punctuation">:</span> <span class="string">&quot;vv&quot;</span><span class="punctuation">,</span></span><br><span class="line">		<span class="attr">&quot;body&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">			<span class="string">&quot;new Vue(&#123;&quot;</span></span><br><span class="line">				<span class="string">&quot;    el:&#x27;#app&#x27;,&quot;</span></span><br><span class="line">				<span class="string">&quot;    data:&#123;&quot;</span></span><br><span class="line"></span><br><span class="line">				<span class="string">&quot;    &#125;&quot;</span></span><br><span class="line"></span><br><span class="line">			<span class="string">&quot;&#125;);&quot;</span></span><br><span class="line">		<span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">		<span class="attr">&quot;description&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Log output to console&quot;</span></span><br><span class="line">	<span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<hr>
+<blockquote>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">&quot;Print to console&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">	 	<span class="attr">&quot;prefix&quot;</span><span class="punctuation">:</span> <span class="string">&quot;cls&quot;</span><span class="punctuation">,</span></span><br><span class="line">	 	<span class="attr">&quot;body&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">	 		<span class="string">&quot;console.log(&#x27;$1&#x27;);&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;$2&quot;</span></span><br><span class="line">		<span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">		<span class="attr">&quot;description&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Log output to console&quot;</span></span><br><span class="line">	<span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<hr>
+<h1 id="7-插值写法和指令写法"><a href="#7-插值写法和指令写法" class="headerlink" title="7. 插值写法和指令写法"></a>7. 插值写法和指令写法</h1><ol>
+<li><p>插值写法 - 功能是用来解析标签体内容的</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">开始标签</span>&gt;</span>&#123;&#123;data&#125;&#125;<span class="tag">&lt;/<span class="name">结束标签</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>指令写法 - 功能是用来解析标签的(绑定标签的属性,绑定标签的事件)</p>
+<p><strong>v-bind</strong> v-model v-on v-for v-if v-show   &#x3D;&gt;  v-指令名称</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">v-bind是单向绑定 - 数据流只能从data流向页面.</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 1. 插值写法 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h1</span>&gt;</span>hello-&#123;&#123;city&#125;&#125;-&#123;&#123;name&#125;&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">&lt;!-- 超链接 </span></span><br><span class="line"><span class="comment">        通过指令的写法来绑定href值</span></span><br><span class="line"><span class="comment">        --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">v-bind:href</span>=<span class="string">&quot;site.url&quot;</span>&gt;</span>&#123;&#123;site.wname&#125;&#125;<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">&lt;!-- v-bind:href可以简写成:href --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">:href</span>=<span class="string">&quot;site.url&quot;</span>&gt;</span>&#123;&#123;site.wname&#125;&#125;<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;plugins/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">new</span> <span class="title class_">Vue</span>(&#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="attr">el</span>:<span class="string">&#x27;#app&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">            <span class="attr">data</span>:&#123;</span></span><br><span class="line"><span class="language-javascript">                <span class="comment">// key:value</span></span></span><br><span class="line"><span class="language-javascript">                <span class="comment">// json对象的格式   &#123;key1:value1,key2:value2,key3:value3&#125;</span></span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">                <span class="comment">//value都是字符串类型,js单/双引号都是允许表示字符串的</span></span></span><br><span class="line"><span class="language-javascript">                <span class="attr">city</span>:<span class="string">&#x27;SuZhou&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">                <span class="attr">name</span>:<span class="string">&#x27;aistar&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">                <span class="comment">//关于value允许是一切类型,那么value又可以是一个json对象.</span></span></span><br><span class="line"><span class="language-javascript">                <span class="attr">site</span>:&#123;</span></span><br><span class="line"><span class="language-javascript">                    <span class="attr">url</span>:<span class="string">&#x27;http://www.baidu.com&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">                    <span class="attr">wname</span>:<span class="string">&#x27;百度一下&#x27;</span></span></span><br><span class="line"><span class="language-javascript">                &#125;</span></span><br><span class="line"><span class="language-javascript">            &#125;</span></span><br><span class="line"><span class="language-javascript">        &#125;);</span></span><br><span class="line"><span class="language-javascript">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h1 id="8-单向绑定和双向绑定"><a href="#8-单向绑定和双向绑定" class="headerlink" title="8. 单向绑定和双向绑定"></a>8. 单向绑定和双向绑定</h1><ol>
+<li>单向绑定:数据只能从data流向页面</li>
+<li>双向绑定:数据不仅可以从data流向页面,还可以从页面流向data</li>
+<li>双向绑定一般应用表单元素上(比如input&#x2F;select等等)</li>
+<li>双向绑定语法v-model:value可以写成成v-model,默认收集的就是value属性值.</li>
+</ol>
+<hr>
+<blockquote>
+<p>代码</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"> <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">     <span class="comment">&lt;!-- 单向绑定-数据只能从data流向页面 --&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">v-bind:value</span>=<span class="string">&quot;single&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">     <span class="comment">&lt;!-- 双向绑定:数据不仅可以从data流向页面,还可以从页面流向data --&gt;</span></span><br><span class="line"></span><br><span class="line">     <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">v-model:value</span>=<span class="string">&quot;two&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">     <span class="comment">&lt;!-- v-model:value可以简写成v-model,默认收集的就是value属性值 --&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">v-model</span>=<span class="string">&quot;two&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">     <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line"></span><br><span class="line">     <span class="comment">&lt;!-- 插值语法 --&gt;</span></span><br><span class="line">     &#123;&#123;two&#125;&#125;</span><br><span class="line"> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"> </span><br><span class="line"> <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;plugins/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"> <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">     <span class="keyword">new</span> <span class="title class_">Vue</span>(&#123;</span></span><br><span class="line"><span class="language-javascript">         <span class="attr">el</span>:<span class="string">&#x27;#app&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">         <span class="attr">data</span>:&#123;</span></span><br><span class="line"><span class="language-javascript">             <span class="attr">single</span>:<span class="string">&#x27;单向&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">             <span class="attr">two</span>:<span class="string">&#x27;双向&#x27;</span></span></span><br><span class="line"><span class="language-javascript">         &#125;</span></span><br><span class="line"><span class="language-javascript">     &#125;);</span></span><br><span class="line"><span class="language-javascript"> </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<hr>
+<h1 id="9-数据代理"><a href="#9-数据代理" class="headerlink" title="9. 数据代理"></a>9. 数据代理</h1><blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hello-&#123;&#123;msg&#125;&#125;  </span><br><span class="line"></span><br><span class="line">vue实例上的 &#123;&#123;_data.msg&#125;&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<hr>
+<h2 id="1-java中的代理"><a href="#1-java中的代理" class="headerlink" title="1. java中的代理"></a>1. java中的代理</h2><ol>
+<li><p>正向代理</p>
+<p>客户端明确知道服务器的地址,但是没有办法进行直接的访问.需要通过代理服务器进行访问.</p>
+<p>client[浏览器]    &#x3D;&gt; 输入网址(发送请求)    &#x3D;&gt;  代理服务器   &#x3D;&gt; 转发到目标服务器</p>
+<p><strong>服务器是不知道具体的客户端的位置的.</strong></p>
+<p><strong>正向代理-代理的是客户端</strong></p>
+</li>
+</ol>
+<p>​		举例:  我想跟       琪琪    强老师借钱</p>
+<ol>
+<li><p><strong>反向代理</strong></p>
+<p>场景: client &#x3D;&gt; taobao.com(背后有n个服务为taobao.com服务的)</p>
+<p>client  &#x3D;&gt; 发送请求taobao.com[代理服务器的地址]  &#x3D;&gt; 代理server互换后台的那些N个服务[每个服务都有接口地址]<br>我(client ) 向 琪琪借钱[代理server] &#x3D;&gt; 跟强&#x2F;王老师借了一点…</p>
+<p><strong>客户端是不知道具体的服务器的位置的</strong></p>
+<p><strong>反向代理 - 代理的服务器(nginx)</strong></p>
+<p>原因:为了真实的server的安全.</p>
+</li>
+</ol>
+<h2 id="2-Object-defineProperty"><a href="#2-Object-defineProperty" class="headerlink" title="2. Object.defineProperty"></a>2. Object.defineProperty</h2><blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="comment">//比如定义一个json对象</span></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">let</span> user=&#123;</span></span><br><span class="line"><span class="language-javascript"> <span class="attr">name</span>:<span class="string">&#x27;qiqi&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript"> <span class="attr">sex</span>:<span class="string">&#x27;F&#x27;</span></span></span><br><span class="line"><span class="language-javascript">&#125;</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="title class_">Object</span>.<span class="title function_">defineProperty</span>(user,<span class="string">&#x27;age&#x27;</span>,&#123;</span></span><br><span class="line"><span class="language-javascript"> <span class="attr">value</span>:<span class="number">18</span></span></span><br><span class="line"><span class="language-javascript">&#125;)</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="comment">//遍历/迭代对象中所有的属性</span></span></span><br><span class="line"><span class="language-javascript"><span class="comment">//age默认是不可被迭代</span></span></span><br><span class="line"><span class="language-javascript"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Object</span>.<span class="title function_">keys</span>(user));</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">for</span>(<span class="keyword">let</span> k <span class="keyword">in</span> user)&#123;</span></span><br><span class="line"><span class="language-javascript"> <span class="variable language_">console</span>.<span class="title function_">log</span>(k);      </span></span><br><span class="line"><span class="language-javascript">&#125;</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="variable language_">console</span>.<span class="title function_">log</span>(user)</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>浏览器控制台</p>
+<img  
+                     lazyload
+                     alt="image"
+                     data-src="E:/20230710/note/yuke-demoy/yuke-vue/yuke-vue-note/imgs/dp01.png"
+                      style="zoom: 50%;" 
+                > 
+
+<ol>
+<li><p>使用 Object.defineProperty定义的属性是灰色的.</p>
+<p>代表这个属性不可被迭代&#x2F;遍历</p>
+</li>
+<li><p>默认是不可被删除的</p>
+<img  
+                     lazyload
+                     alt="image"
+                     data-src="E:/20230710/note/yuke-demoy/yuke-vue/yuke-vue-note/imgs/dp02.png"
+                      style="zoom: 50%;" 
+                >  
+</li>
+<li><p>默认不可被修改</p>
+<img  
+                     lazyload
+                     alt="image"
+                     data-src="E:/20230710/note/yuke-demoy/yuke-vue/yuke-vue-note/imgs/dp03.png"
+                      style="zoom: 50%;" 
+                ></li>
+</ol>
+<hr>
+<p>配置项讲解,让Object.defineProperty定义的属性可以被迭代,修改,删除</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Object</span>.<span class="title function_">defineProperty</span>(user,<span class="string">&#x27;age&#x27;</span>,&#123;</span><br><span class="line">  <span class="attr">value</span>:<span class="number">18</span>,</span><br><span class="line">  <span class="comment">// 配置项</span></span><br><span class="line">  <span class="comment">//可以被修改</span></span><br><span class="line">  <span class="attr">writable</span>:<span class="literal">true</span>,</span><br><span class="line">  <span class="comment">// 可以被删除</span></span><br><span class="line">  <span class="attr">configurable</span>:<span class="literal">true</span>,</span><br><span class="line">  <span class="comment">//可以被枚举/遍历/迭代</span></span><br><span class="line">  <span class="attr">enumerable</span>:<span class="literal">true</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</blockquote>
+<hr>
+<p><code>代码2</code></p>
+<p>效果: 修改age的值,能够对num造成影响</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    </span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">        <span class="comment">//定义一个num</span></span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">let</span> num = <span class="number">18</span></span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">        <span class="comment">//比如定义一个json对象</span></span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">let</span> user=&#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="attr">name</span>:<span class="string">&#x27;qiqi&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">            <span class="attr">sex</span>:<span class="string">&#x27;F&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">            <span class="comment">// 修改num值,不会对age造成任何影响</span></span></span><br><span class="line"><span class="language-javascript">            <span class="comment">// age:num</span></span></span><br><span class="line"><span class="language-javascript">        &#125;</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">        <span class="comment">//&quot;错误的视觉&quot;  -  修改num的值,好像是可以影响age</span></span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">        <span class="comment">//num是age的代理</span></span></span><br><span class="line"><span class="language-javascript">        <span class="title class_">Object</span>.<span class="title function_">defineProperty</span>(user,<span class="string">&#x27;age&#x27;</span>,&#123;</span></span><br><span class="line"><span class="language-javascript">           <span class="comment">//修改age-对num造成影响</span></span></span><br><span class="line"><span class="language-javascript">          </span></span><br><span class="line"><span class="language-javascript">           <span class="comment">//调用/访问age的值的时候,getter方法就会走   </span></span></span><br><span class="line"><span class="language-javascript">           <span class="comment">//user.age</span></span></span><br><span class="line"><span class="language-javascript">           <span class="comment">//点击age:省略号  - 走一次getter</span></span></span><br><span class="line"><span class="language-javascript">           <span class="title function_">get</span>(<span class="params"></span>)&#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;getter...&#x27;</span>);</span></span><br><span class="line"><span class="language-javascript">            <span class="keyword">return</span> num;</span></span><br><span class="line"><span class="language-javascript">           &#125;,</span></span><br><span class="line"><span class="language-javascript">           <span class="comment">//只要修改age的值,那么就会调用setter方法</span></span></span><br><span class="line"><span class="language-javascript">           <span class="title function_">set</span>(<span class="params">v</span>)&#123;</span></span><br><span class="line"><span class="language-javascript">             <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;修改的值是:&#x27;</span>+v);   </span></span><br><span class="line"><span class="language-javascript">             num = v;</span></span><br><span class="line"><span class="language-javascript">           &#125;</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">        &#125;)</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">console</span>.<span class="title function_">log</span>(user)</span></span><br><span class="line"><span class="language-javascript">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="3-数据代理简单示例"><a href="#3-数据代理简单示例" class="headerlink" title="3. 数据代理简单示例"></a>3. 数据代理简单示例</h2><blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">let</span> obj1 = &#123;<span class="attr">x</span>:<span class="number">10</span>&#125;</span><br><span class="line"><span class="keyword">let</span> obj2 = &#123;<span class="attr">y</span>:<span class="number">20</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//需求</span></span><br><span class="line"><span class="comment">//1.通过Object.defineProperty给obj2新增一个属性x</span></span><br><span class="line"><span class="comment">//2. 效果: 用obj2.x来代理obj1这个对象中的x</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//修改obj2.x的值,期望obj1.x也会跟着后面变化</span></span><br><span class="line"><span class="comment">//数据代理:通过一个对象来代理另外一个对象中属性的操作[读/写]</span></span><br><span class="line"><span class="title class_">Object</span>.<span class="title function_">defineProperty</span>(obj2,<span class="string">&#x27;x&#x27;</span>,&#123;</span><br><span class="line"><span class="title function_">get</span>(<span class="params"></span>)&#123;</span><br><span class="line"> <span class="keyword">return</span> obj1.<span class="property">x</span></span><br><span class="line">&#125;,</span><br><span class="line"><span class="title function_">set</span>(<span class="params">v</span>)&#123;</span><br><span class="line"> obj1.<span class="property">x</span> = v; </span><br><span class="line">&#125;</span><br><span class="line">&#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<img  
+                     lazyload
+                     alt="image"
+                     data-src="E:/20230710/note/yuke-demoy/yuke-vue/yuke-vue-note/imgs/dp04.png"
+                      style="zoom:50%;" 
+                > 
+</blockquote>
+<hr>
+<h2 id="4-vue中的数据代理"><a href="#4-vue中的数据代理" class="headerlink" title="4. vue中的数据代理"></a>4. vue中的数据代理</h2><blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">&quot;app&quot;</span>&gt;</span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">h3</span>&gt;</span>地址:&#123;&#123;address&#125;&#125;<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">h3</span>&gt;</span>名称:&#123;&#123;name&#125;&#125;<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span></span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;plugins/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"><span class="keyword">const</span> vm = <span class="keyword">new</span> <span class="title class_">Vue</span>(&#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"> <span class="attr">el</span>:<span class="string">&#x27;#app&#x27;</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"> <span class="attr">data</span>:&#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">   <span class="attr">address</span>:<span class="string">&#x27;苏州&#x27;</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">   <span class="attr">name</span>:<span class="string">&#x27;admin&#x27;</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"> &#125;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">&#125;);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"><span class="variable language_">console</span>.<span class="title function_">log</span>(vm)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<p><code>证明vm实例身上的_data就是js代码中的data</code>,但是直接输入vm._data&#x3D;&#x3D;data报错</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">VM269:1 <span class="title">Uncaught</span> <span class="title">ReferenceError</span>: <span class="title">data</span> <span class="title">is</span> <span class="title">not</span> <span class="title">defined</span></span></span><br><span class="line"><span class="function"> <span class="title">at</span> &lt;<span class="title">anonymous</span>&gt;:1:11</span></span><br></pre></td></tr></table></figure>
+
+<p><code>技巧</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">let</span> data = &#123;</span><br><span class="line"> <span class="attr">address</span>:<span class="string">&#x27;苏州&#x27;</span>,</span><br><span class="line"> <span class="attr">name</span>:<span class="string">&#x27;admin&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> vm = <span class="keyword">new</span> <span class="title class_">Vue</span>(&#123;</span><br><span class="line"><span class="attr">el</span>:<span class="string">&#x27;#app&#x27;</span>,</span><br><span class="line"><span class="comment">// data:data</span></span><br><span class="line"><span class="comment">// 简写</span></span><br><span class="line">data</span><br><span class="line">&#125;);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(vm)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>vm._data&#x3D;&#x3D;data返回true</p>
+<p>原理</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Object</span>.<span class="title function_">defineProperty</span>(vm,<span class="string">&#x27;address&#x27;</span>,&#123;</span><br><span class="line"><span class="title function_">get</span>(<span class="params"></span>)&#123;</span><br><span class="line"> <span class="keyword">return</span> data中的address</span><br><span class="line">&#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">vm.<span class="property">address</span>实际上访问的就是data中的address</span><br></pre></td></tr></table></figure>
+</blockquote>
+<hr>
+<p>图示</p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="E:/20230710/note/yuke-demoy/yuke-vue/yuke-vue-note/imgs/数据代理图示.png"
+                     
+                > </p>
+<blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">虽然data就是_data,底层做了数据劫持[此处_data是对data功能上面做了升级的],数据是可以流向页面的.</span><br></pre></td></tr></table></figure></blockquote>
+
+            </div>
+
+            
+
+            
+
+            
+                <div class="article-nav">
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/2023/07/12/hexo%E6%90%AD%E5%BB%BA%E6%8A%80%E6%9C%AF/"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">hexo搭建技术</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+                <div class="comment-container">
+                    
+<div class="comments-container">
+    <div id="comments-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fas fa-comments"></i>&nbsp;Comments
+    </div>
+    
+        
+            
+
+    <div class="valine-container">
+        <script data-pjax src="//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script>
+        <div id="vcomments"></div>
+        <script data-pjax>
+          function loadValine() {
+
+            const config = {
+              el: '#vcomments',
+              appId: 'kr4ZAGhMIpUEtmIU8DQWOIYv-gzGzoHsz',
+              appKey: 'Bo6FYYL2JmaBdonYYnnGEre4',
+              meta: ['nick', 'mail', 'link'],
+              avatar: 'wavatar',
+              enableQQ: true,
+              placeholder: '请提出你的问题',
+              lang: 'en'.toLowerCase()
+            }
+
+            if ('') {
+              config.serverURLs = ''
+            }
+
+            new Valine(config)
+
+            function getAuthor(language) {
+              switch (language) {
+                case 'en':
+                  return 'Author'
+                case 'zh-CN':
+                  return '博主'
+                default:
+                  return 'Master'
+              }
+            }
+
+            // Add "Author" identify
+            const getValineDomTimer = setInterval(() => {
+              const vcards = document.querySelectorAll('#vcomments .vcards .vcard')
+              if (vcards.length > 0) {
+                let author = 'Mu xingyu'
+
+                if (author) {
+                  for (let vcard of vcards) {
+                    const vnick_dom = vcard.querySelector('.vhead .vnick')
+                    const vnick = vnick_dom.innerHTML
+                    if (vnick === author) {
+                      vnick_dom.innerHTML = `${vnick} <span class="author">${getAuthor(KEEP.hexo_config.language)}</span>`
+                    }
+                  }
+                }
+                clearInterval(getValineDomTimer)
+              } else {
+                clearInterval(getValineDomTimer)
+              }
+            }, 2000)
+          }
+
+          if ('true' === 'true') {
+            const loadValineTimeout = setTimeout(() => {
+              loadValine()
+              clearTimeout(loadValineTimeout)
+            }, 1000)
+          } else {
+            window.addEventListener('DOMContentLoaded', loadValine)
+          }
+        </script>
+    </div>
+
+
+
+        
+    
+</div>
+
+                </div>
+            
+        </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-vue%E4%BC%98%E7%82%B9"><span class="nav-number">1.</span> <span class="nav-text">1. vue优点</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-vscode%E7%8E%AF%E5%A2%83"><span class="nav-number"></span> <span class="nav-text">4. vscode环境</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-vue-%E4%BD%93%E9%AA%8C"><span class="nav-number"></span> <span class="nav-text">5. vue-体验</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-vscode%E4%B8%AD%E8%AE%BE%E7%BD%AE%E4%B8%80%E4%B8%8B%E4%BB%A3%E7%A0%81%E7%9A%84%E7%89%87%E6%AE%B5"><span class="nav-number"></span> <span class="nav-text">6. vscode中设置一下代码的片段</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-%E6%8F%92%E5%80%BC%E5%86%99%E6%B3%95%E5%92%8C%E6%8C%87%E4%BB%A4%E5%86%99%E6%B3%95"><span class="nav-number"></span> <span class="nav-text">7. 插值写法和指令写法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#8-%E5%8D%95%E5%90%91%E7%BB%91%E5%AE%9A%E5%92%8C%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A"><span class="nav-number"></span> <span class="nav-text">8. 单向绑定和双向绑定</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#9-%E6%95%B0%E6%8D%AE%E4%BB%A3%E7%90%86"><span class="nav-number"></span> <span class="nav-text">9. 数据代理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-java%E4%B8%AD%E7%9A%84%E4%BB%A3%E7%90%86"><span class="nav-number">1.</span> <span class="nav-text">1. java中的代理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Object-defineProperty"><span class="nav-number">2.</span> <span class="nav-text">2. Object.defineProperty</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E6%95%B0%E6%8D%AE%E4%BB%A3%E7%90%86%E7%AE%80%E5%8D%95%E7%A4%BA%E4%BE%8B"><span class="nav-number">3.</span> <span class="nav-text">3. 数据代理简单示例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-vue%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E4%BB%A3%E7%90%86"><span class="nav-number">4.</span> <span class="nav-text">4. vue中的数据代理</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2023</span> -
+            
+            2023
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">Mu xingyu</a>
+            
+        </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="tools-item flex-center go-to-comments">
+                <i class="fas fa-comment"></i>
+                <span class="post-comments-count"></span>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/dark-light-toggle.js"></script>
+
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/local-search.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/code-block.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/lazyload.js"></script>
+
+
+<div class="post-scripts pjax">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/post-helper.js"></script>
+        
+            <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/libs/anime.min.js"></script>
+        
+        
+            <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/toc.js"></script>
+        
+    
+</div>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
+
+
+
+</body>
+</html>
