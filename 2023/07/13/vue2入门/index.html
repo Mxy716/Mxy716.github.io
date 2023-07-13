@@ -179,7 +179,7 @@
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2023-07-13 17:24:27</span>
+        <span class="pc">2023-07-13 20:30:08</span>
     </span>
     
     
@@ -254,10 +254,10 @@
 <p><code>采用的是声明式编码,不再需要js去操作dom了,比较方便</code></p>
 </li>
 <li><p>采用组件化编程的方式.提高组件的复用性</p>
-<img lazyload alt="image" data-src="E:/20230710/note/yuke-demoy/yuke-vue/yuke-vue-note/imgs/组件式.png" style="zoom: 33%;"> 
+<img lazyload alt="image" data-src="vue2入门/组件式.png" style="zoom:33%;">
 </li>
 <li><p>采用的是虚拟DOM+diff算法,复用dom节点,提高效率</p>
-<img lazyload alt="image" data-src="E:/20230710/note/yuke-demoy/yuke-vue/yuke-vue-note/imgs/Diff.png" style="zoom:33%;"></li>
+<img lazyload alt="image" data-src="D:vue2入门/Diff.png" style="zoom:50%;"></li>
 </ol>
 </blockquote>
 <h1 id="4-vscode环境"><a href="#4-vscode环境" class="headerlink" title="4. vscode环境"></a>4. vscode环境</h1><blockquote>
@@ -362,17 +362,17 @@
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="comment">//比如定义一个json对象</span></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">let</span> user=&#123;</span></span><br><span class="line"><span class="language-javascript"> <span class="attr">name</span>:<span class="string">&#x27;qiqi&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript"> <span class="attr">sex</span>:<span class="string">&#x27;F&#x27;</span></span></span><br><span class="line"><span class="language-javascript">&#125;</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="title class_">Object</span>.<span class="title function_">defineProperty</span>(user,<span class="string">&#x27;age&#x27;</span>,&#123;</span></span><br><span class="line"><span class="language-javascript"> <span class="attr">value</span>:<span class="number">18</span></span></span><br><span class="line"><span class="language-javascript">&#125;)</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="comment">//遍历/迭代对象中所有的属性</span></span></span><br><span class="line"><span class="language-javascript"><span class="comment">//age默认是不可被迭代</span></span></span><br><span class="line"><span class="language-javascript"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Object</span>.<span class="title function_">keys</span>(user));</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">for</span>(<span class="keyword">let</span> k <span class="keyword">in</span> user)&#123;</span></span><br><span class="line"><span class="language-javascript"> <span class="variable language_">console</span>.<span class="title function_">log</span>(k);      </span></span><br><span class="line"><span class="language-javascript">&#125;</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="variable language_">console</span>.<span class="title function_">log</span>(user)</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>浏览器控制台</p>
-<img lazyload alt="image" data-src="E:/20230710/note/yuke-demoy/yuke-vue/yuke-vue-note/imgs/dp01.png" style="zoom: 50%;"> 
+<img lazyload alt="image" data-src="D:vue2入门/dp01.png" style="zoom:50%;"> 
 
 <ol>
 <li><p>使用 Object.defineProperty定义的属性是灰色的.</p>
 <p>代表这个属性不可被迭代&#x2F;遍历</p>
 </li>
 <li><p>默认是不可被删除的</p>
-<img lazyload alt="image" data-src="E:/20230710/note/yuke-demoy/yuke-vue/yuke-vue-note/imgs/dp02.png" style="zoom: 50%;">  
+<img lazyload alt="image" data-src="D:vue2入门/dp02.png" style="zoom: 50%;">  
 </li>
 <li><p>默认不可被修改</p>
-<img lazyload alt="image" data-src="E:/20230710/note/yuke-demoy/yuke-vue/yuke-vue-note/imgs/dp03.png" style="zoom: 50%;"></li>
+<img lazyload alt="image" data-src="D:vue2入门/dp03.png" style="zoom: 50%;"></li>
 </ol>
 <hr>
 <p>配置项讲解,让Object.defineProperty定义的属性可以被迭代,修改,删除</p>
@@ -387,7 +387,7 @@
 <h2 id="3-数据代理简单示例"><a href="#3-数据代理简单示例" class="headerlink" title="3. 数据代理简单示例"></a>3. 数据代理简单示例</h2><blockquote>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">let</span> obj1 = &#123;<span class="attr">x</span>:<span class="number">10</span>&#125;</span><br><span class="line"><span class="keyword">let</span> obj2 = &#123;<span class="attr">y</span>:<span class="number">20</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//需求</span></span><br><span class="line"><span class="comment">//1.通过Object.defineProperty给obj2新增一个属性x</span></span><br><span class="line"><span class="comment">//2. 效果: 用obj2.x来代理obj1这个对象中的x</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//修改obj2.x的值,期望obj1.x也会跟着后面变化</span></span><br><span class="line"><span class="comment">//数据代理:通过一个对象来代理另外一个对象中属性的操作[读/写]</span></span><br><span class="line"><span class="title class_">Object</span>.<span class="title function_">defineProperty</span>(obj2,<span class="string">&#x27;x&#x27;</span>,&#123;</span><br><span class="line"><span class="title function_">get</span>(<span class="params"></span>)&#123;</span><br><span class="line"> <span class="keyword">return</span> obj1.<span class="property">x</span></span><br><span class="line">&#125;,</span><br><span class="line"><span class="title function_">set</span>(<span class="params">v</span>)&#123;</span><br><span class="line"> obj1.<span class="property">x</span> = v; </span><br><span class="line">&#125;</span><br><span class="line">&#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 
-<img lazyload alt="image" data-src="E:/20230710/note/yuke-demoy/yuke-vue/yuke-vue-note/imgs/dp04.png" style="zoom:50%;"> 
+<img lazyload alt="image" data-src="D:vue2入门/dp04.png" style="zoom:50%;"> 
 </blockquote>
 <hr>
 <h2 id="4-vue中的数据代理"><a href="#4-vue中的数据代理" class="headerlink" title="4. vue中的数据代理"></a>4. vue中的数据代理</h2><blockquote>
