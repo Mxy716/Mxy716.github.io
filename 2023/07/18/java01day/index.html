@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Mu xingyu">
+    
+    <title>
+        
+            java01day |
+        
+        mxy716
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/logo.svg">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/font/css/fontawesome.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/font/css/regular.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/font/css/solid.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/font/css/brands.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"en","path":"search.xml"}
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true},"style":{"primary_color":"#0066cc","logo":"/images/logo.svg","favicon":"/images/logo.svg","avatar":"/images/avatar.svg","font_size":"18px","font_family":null,"hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"header_transparent":true,"background_img":"/images/bg.svg","description":"千里之行始于足下.","font_color":"rgb(0, 102, 204)","hitokoto":true},"scroll":{"progress_bar":true,"percent":true}},"local_search":{"enable":true,"preload":true},"code_copy":{},"code_block":{"tools":{"enable":true,"style":"mac"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":true},"lazyload":{"enable":false},"comment":{"enable":true,"use":"valine","valine":{"appid":"kr4ZAGhMIpUEtmIU8DQWOIYv-gzGzoHsz","appkey":"Bo6FYYL2JmaBdonYYnnGEre4","server_urls":null,"placeholder":"请提出你的问题"},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":true,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":true,"wordcount":true,"min2read":true},"img_align":"left","copyright_info":false},"version":"3.6.1"}
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
+    KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
+    KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original article title","author":"Original article author","link":"Original article link"}
+  </script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <i class="pjax-progress-icon fas fa-circle-notch fa-spin"></i>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/logo.svg">
+                </a>
+            
+            <a class="logo-title" href="/">
+               mxy716
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                关于
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">关于</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation">java01day</span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/avatar.svg">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">Mu xingyu</span>
+                            
+                                <span class="author-label">Lv1</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2023-07-18 08:51:54</span>
+        <span class="mobile">2023-07-18 08:51</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2023-07-18 18:01:33</span>
+    </span>
+    
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E4%B8%80%E7%82%B9%E7%AC%94%E8%AE%B0/">一点笔记</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>3k Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>11 Mins</span>
+        </span>
+    
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                
+
+                <h1 id="java介绍"><a href="#java介绍" class="headerlink" title="java介绍"></a>java介绍</h1><ol>
+<li><p>爪哇 - 印度尼西亚的爪哇岛 - 盛产咖啡豆</p>
+</li>
+<li><p>前身叫做Oak语言 - 橡树,这个商标被一家显卡制造商提前注册了.</p>
+</li>
+<li><p>Java之父 - James Gosling  - 詹姆斯 高斯林(搞死你)</p>
+</li>
+<li><p>原先是属于SUN(太阳)公司 - 优先被IBM公司 - “讨好sun公司 - eclipse(免费) - 日食”</p>
+<p><code>sun不乐意 - 打官司 - 打输了</code></p>
+</li>
+<li><p>oracle公司[甲骨文] - 特殊的数据库产品[oracle] - 2019年以74亿美金收购的.</p>
+</li>
+<li><p>官网:<a class="link" target="_blank" rel="noopener" href="http://www.oracle.com/">www.oracle.com<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+<li><p>java语言是1995年5月23日正式诞生的.</p>
+</li>
+</ol>
+<h1 id="java的三个体系"><a href="#java的三个体系" class="headerlink" title="java的三个体系"></a>java的三个体系</h1><ol>
+<li>javase(j2se) - java standard edition - java标准版 - 包含了java的基础语法 - 传统的适合桌面应用程序的开发.</li>
+<li>javaee(j2ee) - 更名了 - Jakarta 雅加达EE .. java enterprise edition - java企业版</li>
+<li>javame(j2me) - java micro edition - java微型版 - 适合移动端的开发 - “夭折了”</li>
+</ol>
+<h1 id="java的特点"><a href="#java的特点" class="headerlink" title="java的特点"></a>java的特点</h1><blockquote>
+<ol>
+<li>简单易学</li>
+<li><strong>跨(os)平台</strong> - 可移植性 - 与平台无关性</li>
+<li>安全性 - 健壮性 &#x3D;&gt; 不需要维护指针</li>
+<li>动态的语言 - <strong>解释型的语言</strong></li>
+<li>多线程</li>
+<li>分布式</li>
+</ol>
+</blockquote>
+<h1 id="jdk下载地址"><a href="#jdk下载地址" class="headerlink" title="jdk下载地址"></a>jdk下载地址</h1><blockquote>
+<p><a class="link" target="_blank" rel="noopener" href="https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html">https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html<i class="fas fa-external-link-alt"></i></a></p>
+<p>jdk的版本 -   jdk1.0 ….    <strong>jdk5.0[巨变]</strong> …  jdk7.x[变化] -  <strong>jdk8.x[目前最主流的]</strong> .. jdk11.x …   <em><strong>jdk17.x[趋势]</strong></em></p>
+</blockquote>
+<blockquote>
+<p>jdk - java development kit - java开发工具包 - 针对开发者使用的.</p>
+</blockquote>
+<hr>
+<h2 id="jdk17环境变量配置"><a href="#jdk17环境变量配置" class="headerlink" title="jdk17环境变量配置"></a>jdk17环境变量配置</h2><blockquote>
+<ol>
+<li><p>解压到一个非中文的,不能带有特殊符号(比如空格)的目录.</p>
+</li>
+<li><p>桌面 - 计算机 - 右击属性 - 高级系统设置 - 环境变量 - 定位到<code>系统变量</code></p>
+<ul>
+<li><p>新建</p>
+<p>变量名 JAVA_HOME</p>
+<p>变量值 &#x2F;Users&#x2F;admin&#x2F;Downloads&#x2F;jdk-17.0.6(<code>自己电脑的jdk解压之后的绝对路径</code>)</p>
+</li>
+<li><p>找到内置的系统变量 - Path - 点击编辑 - 点击新建</p>
+<p>%JAVA_HOME%\bin</p>
+</li>
+</ul>
+</li>
+<li><p>点击 - 确定 - 关闭所有的设置窗口</p>
+</li>
+<li><p>然后打开终端win+r - 输入cmd,<code>如果在进行环境变量设置之前,已经打开了终端,那么重启这个终端</code></p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">java -version</span><br><span class="line">   </span><br><span class="line">java version &quot;<span class="number">17</span>.<span class="number">0</span>.<span class="number">6</span>&quot; <span class="number">2023</span>-<span class="number">01</span>-<span class="number">17</span> LTS</span><br><span class="line">Java(TM) SE Runtime Environment (build <span class="number">17</span>.<span class="number">0</span>.<span class="number">6</span>+<span class="number">9</span>-LTS-<span class="number">190</span>)</span><br><span class="line">Java HotSpot(TM) <span class="number">64</span>-Bit Server VM (build <span class="number">17</span>.<span class="number">0</span>.<span class="number">6</span>+<span class="number">9</span>-LTS-<span class="number">190</span>, mixed <span class="built_in">mode</span>, sharing)</span><br></pre></td></tr></table></figure></li>
+</ol>
+</blockquote>
+<hr>
+<h1 id="java的执行原理"><a href="#java的执行原理" class="headerlink" title="java的执行原理"></a>java的执行原理</h1><blockquote>
+<p>jdk的解压之后的bin目录 - .exe结尾的都是开发工具.比较重要的<strong>javac.exe和java.exe</strong></p>
+<ol>
+<li>javac.exe - 将java源代码<strong>编译</strong>成字节码文件</li>
+<li>java.exe - <strong>运行</strong>这个字节码文件[运行java程序]</li>
+</ol>
+</blockquote>
+<hr>
+<blockquote>
+<ol>
+<li><p>在桌面 - 右击新建一个文件 - HelloWorld.java(类文件)</p>
+<p><code>确保计算机中的文件的后缀扩展名要显示的 - 磁盘 - 工具 - 扩展名打钩</code></p>
+<p><code>否则可能创建出来的文件HelloWorld.java.txt文件</code></p>
+</li>
+<li><p>打开文件,进行编码</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//单行注释 - 注释的代码是不会经过编译器进行编译的 =&gt; 程序员看的.</span></span><br><span class="line"><span class="comment">//public(公开的)和class(类)都是属于关键字 =&gt; 定义类</span></span><br><span class="line"><span class="comment">//此处的HelloWorld就是类名,类名必须和文件名高度保持一致.</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">HelloWorld</span>&#123;</span><br><span class="line">  <span class="comment">//程序的主入口 - &quot;大门&quot;</span></span><br><span class="line">  <span class="comment">// main方法 - &quot;死记住语法&quot;</span></span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span>&#123;</span><br><span class="line">  	<span class="comment">//方法体 - 现阶段 - 写代码的地方</span></span><br><span class="line">    <span class="comment">//在控制台输出一句话</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">//注意:在整个编码环节中,所有的符号必须是英文模式下的.</span></span><br><span class="line">    <span class="comment">//java代码一行结束之后必须使用;</span></span><br><span class="line">    System.out.println(<span class="string">&quot;HelloWorld!&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>通过终端(win+r &#x3D;&gt; cmd)进入到桌面</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">User/计算机名 - 用户的主目录</span><br><span class="line"><span class="function">   </span></span><br><span class="line"><span class="function">C:\<span class="title">User</span>\计算机名&gt;<span class="title">cd</span> <span class="title">Desktop</span></span></span><br><span class="line"><span class="function">   </span></span><br></pre></td></tr></table></figure></li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="4">
+<li><p><strong>编译</strong>整个java源代码文件[以.java为后缀的文件]</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">C:\<span class="title">User</span>\计算机名\<span class="title">Desktop</span>&gt;<span class="title">javac</span> <span class="title">HelloWorld.java</span></span></span><br></pre></td></tr></table></figure>
+
+<p><code>效果:只要语法没有问题,就会编译生成一个.class的字节码文件</code></p>
+</li>
+<li><p>运行的字节码文件</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">C:\<span class="title">User</span>\计算机名\<span class="title">Desktop</span>&gt;<span class="title">java</span> <span class="title">HelloWorld</span></span></span><br></pre></td></tr></table></figure></li>
+</ol>
+</blockquote>
+<hr>
+<p>总结: java程序的执行的基本原理:</p>
+<ol>
+<li><p>编写好程序之后,当执行javac.exe命令的时候,本质上是调用jdk中的编译器,将.java源代码文件编译成一个.class的字节码文件</p>
+<p><code>为什么需要编译呢? - 因为计算机是不能够直接识别java语言编写的程序.</code></p>
+</li>
+<li><p>当执行java.exe命令的时候,本质上是调用jvm中的解释器,它会将.class字节码文件逐行翻译成机器语言.</p>
+<p><code>jvm - java虚拟机 - 想象成是以.class字节码文件为指令的cpu</code></p>
+</li>
+</ol>
+<h2 id="基本原理图"><a href="#基本原理图" class="headerlink" title="基本原理图"></a>基本原理图</h2><p>![]<img src="/2023/07/18/java01day/java执行原理.png" style="zoom:;"></p>
+<ol>
+<li><p>.class字节码文件是在java虚拟机中执行的.</p>
+</li>
+<li><p>一次编译,到处执行 - <strong>跨(os)平台</strong> - 可移植性 - 与平台无关性</p>
+</li>
+<li><p>JVM的位置在java语言开发好的应用程序与底层的os之间的那一层.  jvm安装在os上的.  正是因为有了jvm,所以java才具备跨平台性.</p>
+</li>
+<li><p>jvm是不跨平台的.</p>
+</li>
+<li><p>jvm类似于”翻译官的角色”</p>
+</li>
+</ol>
+<p>​				 java-app - 中国人说的话</p>
+<p>|  胖翻译 (jvm)                            |毛翻译(jvm)</p>
+<p>鬼子 (os)                                     老毛子(os)</p>
+<ol start="6">
+<li><p>思考 - java到底是属于编译型语言,还是属于解释型语言,还是属于半编译半解释型语言? - <strong>解释型</strong></p>
+<p>C语言是属于编译型语言 - 编译型的真正的含义: 将开发语言编写好的程序可以一次性直接编译成我们os能够识别的语言.</p>
+<p>比如c语言的开发的程序可以一次性直接编译成二进制可执行文件, 常见的.exe文件.</p>
+<p>C语言不跨平台 - 特点: 一次编写,到处运行.  </p>
+</li>
+<li><p>为什么java的运行速度没有C快???</p>
+<ul>
+<li>每次执行java.exe命令的时候,都会对.class文件进行逐行翻译.</li>
+<li>C是一次性编译ok,后面直接运行的程序.</li>
+</ul>
+<p>举例:  java执行 - 类似于 “点读笔”,   C执行-&gt;一次翻译好了中文</p>
+</li>
+</ol>
+<h1 id="类命名的规范"><a href="#类命名的规范" class="headerlink" title="类命名的规范"></a>类命名的规范</h1><blockquote>
+<p>类是java的基本单元.</p>
+<ol>
+<li><p>必须要遵守的</p>
+<ul>
+<li><p>类名只能由字母 or 数字 or 下划线 or $组成,但是不能由数字开头.</p>
+</li>
+<li><p>类名不能是java中的关键字(<code>关键字</code> - 某些含有语法含义的单词)</p>
+<p><code>if,for,byte,short,int,long ,float,double,char,enum...</code></p>
+</li>
+<li><p>类名不能是java中内置的<strong>对象类型</strong>(比如System,String,Scanner,Date…)</p>
+</li>
+<li><p>类名同样不能是以下三个字面量,true,false,null</p>
+</li>
+<li><p>类名不能是java中的保留关键字goto</p>
+</li>
+</ul>
+</li>
+<li><p>推荐遵守</p>
+<ul>
+<li><p>类名采用”大驼峰” - 首字母要大写,其余单词小写.如果类名由多个单词组成,每个单词的首字母都要大写.</p>
+<p>比如HelloWorld,StudentSystem…</p>
+</li>
+<li><p>不推荐使用中文.防止出现中文乱码问题.</p>
+</li>
+<li><p>不能使用中文拼音</p>
+</li>
+<li><p>提倡见名知意 - 提高程序的可读性.</p>
+</li>
+</ul>
+</li>
+</ol>
+</blockquote>
+<hr>
+<h1 id="jdk和jvm以及jre"><a href="#jdk和jvm以及jre" class="headerlink" title="jdk和jvm以及jre"></a>jdk和jvm以及jre</h1><blockquote>
+<p>三者之间的区别和联系</p>
+</blockquote>
+<blockquote>
+<ol>
+<li><p>jvm - java virtual machine - java虚拟机 - 跨平台 - 本身就是C语言写的.</p>
+</li>
+<li><p>jre - Java Runtime Environment - java运行时环境,针对java程序的使用者来讲的.</p>
+<p>如果仅仅只是想要运行一个java开发好的程序,那么只需要在计算机中安装jre即可.</p>
+<p>jre包括一些核心的内库以及jvm,所以jre是包括jvm</p>
+<p>jre &#x3D; 核心内库 + jvm</p>
+</li>
+<li><p>jdk - java development kit - java开发工具包 - 包括一些开发工具javac.exe,java.exe,jar.exe,javadoc.exe,javap.exe等等</p>
+<p>针对开发者使用的.jdk包括开发工具以及jre,所以jdk &#x3D; 开发工具 + jre</p>
+</li>
+</ol>
+</blockquote>
+<hr>
+<h1 id="包package"><a href="#包package" class="headerlink" title="包package"></a>包package</h1><blockquote>
+<p>包对于类的作用就类似于文件夹对文件的作用 - 对类文件进行分类管理的.在磁盘中就是一个文件夹.</p>
+<p>企业中对包的命名规范</p>
+<ol>
+<li><p>个人发布的,但是不是独立完成的.</p>
+<p>indi.发布者名称.项目名称.模块名称</p>
+</li>
+<li><p>个人发布 - 个人独立完成的</p>
+<p>pers.个人名称.项目名称.模块名称</p>
+</li>
+<li><p>个人完成 - 但是没有公开的</p>
+<p>pri.个人名称.项目名称.模块名称</p>
+</li>
+<li><p>团队项目</p>
+<p>team.项目名称.模块名称</p>
+</li>
+<li><p>公司项目 - 一般是采用公司域名倒置的写法.比如百度 - com.baidu.</p>
+<p>tech.aistar</p>
+</li>
+</ol>
+</blockquote>
+<hr>
+<blockquote>
+<p>包的命名规范</p>
+<ol>
+<li><p>可以有数字或者字母开头</p>
+</li>
+<li><p>可以由数字,字母,下划线还有$组成.</p>
+</li>
+<li><p>不能是java中的关键字</p>
+</li>
+<li><p>不能包含java单词.</p>
+</li>
+<li><p>如果包名有多个层次,推荐采用小写字母,并且各个单词之间用.隔开.</p>
+</li>
+<li><p>一旦有了包存在,那么类文件中的首行就会出现声明包的语句</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> tech.aistar.day01;<span class="comment">//must be first line</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+</blockquote>
+<h1 id="java中三种注释"><a href="#java中三种注释" class="headerlink" title="java中三种注释"></a>java中三种注释</h1><blockquote>
+<ol>
+<li><p>单行注释</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 解释单行的代码</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>多行注释</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">       多行注释</span></span><br><span class="line"><span class="comment">       多行注释</span></span><br><span class="line"><span class="comment">    */</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>文档注释 - 后期学习了javadoc.exe(生成我们的api文档) - 文档注释都是可以生效的.</p>
+<ol>
+<li>负责解释类的作用</li>
+<li>负责解释方法的作用</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 本来用来演示: HelloWorld</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> success</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2023/7/17 14:31:25</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+</blockquote>
+<hr>
+<h1 id="关于main方法中的虚拟机参数"><a href="#关于main方法中的虚拟机参数" class="headerlink" title="关于main方法中的虚拟机参数"></a>关于main方法中的虚拟机参数</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>;i&lt;args.length;i++)&#123;</span><br><span class="line">     System.out.println(args[i]);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>正常编译javac HelloWorld.java</p>
+<p>运行并且进行传参java Hello 我们 123 abc</p>
+<h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><blockquote>
+<p><strong>java中是采用数据类型和变量来定义和存储数据的</strong>.<code>并且所有的基本类型都是存在在jvm内存的栈区</code></p>
+<p><code>栈区特点 - 先进后出 - 读写速度比较快</code></p>
+<p><code>速度快的本质 - java是一门强类型的语言 - 在编译期间就必须要确定变量的数据类型</code></p>
+<p>不同的数据类型所占的内存的大小是不一样的.编译期间确定好的类型,不能够改变了.势必会造成空间的浪费.空间一旦浪费,时间[效率]就会提高 - 以空间换时间…</p>
+</blockquote>
+<blockquote>
+<p>java中数据类型分成两大类</p>
+<ol>
+<li><p>基本数据类型</p>
+<ul>
+<li><p>比较主流的说法是<strong>八种</strong></p>
+<p>byte,short,int,long,float,double,char,boolean</p>
+</li>
+<li><p>编程思想 - 把void归纳为基本数据类型 - 九种</p>
+</li>
+</ul>
+</li>
+<li><p>对象类型(无数种) - 包括内置对象类型以及自定义对象类型</p>
+</li>
+</ol>
+</blockquote>
+<hr>
+<blockquote>
+<p>针对八种基本数据类型</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>名称</th>
+<th>字节数&#x2F;位数</th>
+<th>范围</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>byte</td>
+<td>字节</td>
+<td>1个字节 - 8bit</td>
+<td>[-128,127]</td>
+<td>0</td>
+</tr>
+<tr>
+<td>short</td>
+<td>短整型</td>
+<td>2个字节 - 16bit</td>
+<td>[-2^15,2^15-1]</td>
+<td>0</td>
+</tr>
+<tr>
+<td>int</td>
+<td>整型</td>
+<td>4个字节 - 32bit</td>
+<td>[-2^31,2^31-1]</td>
+<td>0</td>
+</tr>
+<tr>
+<td>long</td>
+<td>长整型</td>
+<td>8个字节 - 64bit</td>
+<td>[-2^61,2^61-1]</td>
+<td>0L</td>
+</tr>
+<tr>
+<td>float</td>
+<td>单精度浮点数</td>
+<td>4个字节 - 32bit</td>
+<td>-3.4<em>10^38 - 3.4</em>10^38</td>
+<td>0.0f</td>
+</tr>
+<tr>
+<td>double</td>
+<td>双精度浮点数</td>
+<td>8个字节 - 64bit</td>
+<td>-1.7<em>10^308 , 1.7</em>10^308</td>
+<td>0.0d</td>
+</tr>
+<tr>
+<td>char</td>
+<td>字符</td>
+<td>2个字节- 16bit</td>
+<td>[\u0000,\uffff]或者[0,65535]</td>
+<td>\u0000,空(“”)</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>布尔类型</td>
+<td>1个字节 - 8bit</td>
+<td>true&#x2F;false</td>
+<td>false</td>
+</tr>
+</tbody></table>
+</blockquote>
+<h2 id="变量的命名规范"><a href="#变量的命名规范" class="headerlink" title="变量的命名规范"></a>变量的命名规范</h2><blockquote>
+<p>参考类名 - 唯一的不同点 - “小驼峰命名” - - 首字母要小写,其余单词小写.如果类名由多个单词组成,每个单词的首字母都要大写.</p>
+<p>类名,包名,变量名,方法名,接口名 &#x3D;&gt; 标识符</p>
+</blockquote>
+<h2 id="定义变量的语法"><a href="#定义变量的语法" class="headerlink" title="定义变量的语法"></a>定义变量的语法</h2><blockquote>
+<ol>
+<li><p>数据类型 变量名 [&#x3D; 初始值];</p>
+</li>
+<li><p>可以先定义变量,然后进行赋值,并且可以多次赋值</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a;</span><br><span class="line">a = <span class="number">10</span>;</span><br><span class="line">a = <span class="number">20</span>;</span><br></pre></td></tr></table></figure></li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="3">
+<li>变量在使用之前必须要先初始化&#x2F;定义.</li>
+<li>同{}中不能出现同名的变量</li>
+<li>变量仅仅能在自己所在的{}中使用,这是变量的使用作用域的概念</li>
+</ol>
+</blockquote>
+<h2 id="变量的赋值方式"><a href="#变量的赋值方式" class="headerlink" title="变量的赋值方式"></a>变量的赋值方式</h2><blockquote>
+<ol>
+<li><p>定义变量的同时进行赋值</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">10</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>先定义变量,然后再进行赋值</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a;</span><br><span class="line">a = <span class="number">20</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>通过表达式进行赋值.<code>表达式 - 由变量或者字面量以及运算符能组成的合法的语句</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">a</span>  <span class="operator">=</span><span class="number">10</span>;</span><br><span class="line"><span class="type">int</span> <span class="variable">result</span> <span class="operator">=</span> a + <span class="number">20</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>链式赋值</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> x,y,z = <span class="number">10</span>;</span><br><span class="line"><span class="comment">//仅仅是对z赋值了,x和y仅仅是定义了,尚未初始化</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//同时声明了n个变量</span></span><br><span class="line"><span class="type">int</span> t1,t2,t3;</span><br><span class="line">t1 = t2 = t3 = <span class="number">90</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>可以通过方法进行赋值</p>
+</li>
+</ol>
+</blockquote>
+<hr>
+<h1 id="类型的转换"><a href="#类型的转换" class="headerlink" title="类型的转换"></a>类型的转换</h1><ol>
+<li><p>支持自动类型的转换 - 小的数据类型可以自动转换成大的数据类型</p>
+<p>byte-&gt;short-&gt;int-&gt;long</p>
+<p>char-&gt;int</p>
+<p>int-&gt;double</p>
+</li>
+</ol>
+<hr>
+
+            </div>
+
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E4%B8%80%E7%82%B9%E7%AC%94%E8%AE%B0/">#一点笔记</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/2023/07/13/vue2%E5%85%A5%E9%97%A8/"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">vue2入门</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+                <div class="comment-container">
+                    
+<div class="comments-container">
+    <div id="comments-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fas fa-comments"></i>&nbsp;Comments
+    </div>
+    
+        
+            
+
+    <div class="valine-container">
+        <script data-pjax src="//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script>
+        <div id="vcomments"></div>
+        <script data-pjax>
+          function loadValine() {
+
+            const config = {
+              el: '#vcomments',
+              appId: 'kr4ZAGhMIpUEtmIU8DQWOIYv-gzGzoHsz',
+              appKey: 'Bo6FYYL2JmaBdonYYnnGEre4',
+              meta: ['nick', 'mail', 'link'],
+              avatar: 'wavatar',
+              enableQQ: true,
+              placeholder: '请提出你的问题',
+              lang: 'en'.toLowerCase()
+            }
+
+            if ('') {
+              config.serverURLs = ''
+            }
+
+            new Valine(config)
+
+            function getAuthor(language) {
+              switch (language) {
+                case 'en':
+                  return 'Author'
+                case 'zh-CN':
+                  return '博主'
+                default:
+                  return 'Master'
+              }
+            }
+
+            // Add "Author" identify
+            const getValineDomTimer = setInterval(() => {
+              const vcards = document.querySelectorAll('#vcomments .vcards .vcard')
+              if (vcards.length > 0) {
+                let author = 'Mu xingyu'
+
+                if (author) {
+                  for (let vcard of vcards) {
+                    const vnick_dom = vcard.querySelector('.vhead .vnick')
+                    const vnick = vnick_dom.innerHTML
+                    if (vnick === author) {
+                      vnick_dom.innerHTML = `${vnick} <span class="author">${getAuthor(KEEP.hexo_config.language)}</span>`
+                    }
+                  }
+                }
+                clearInterval(getValineDomTimer)
+              } else {
+                clearInterval(getValineDomTimer)
+              }
+            }, 2000)
+          }
+
+          if ('true' === 'true') {
+            const loadValineTimeout = setTimeout(() => {
+              loadValine()
+              clearTimeout(loadValineTimeout)
+            }, 1000)
+          } else {
+            window.addEventListener('DOMContentLoaded', loadValine)
+          }
+        </script>
+    </div>
+
+
+
+        
+    
+</div>
+
+                </div>
+            
+        </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#java%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.</span> <span class="nav-text">java介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#java%E7%9A%84%E4%B8%89%E4%B8%AA%E4%BD%93%E7%B3%BB"><span class="nav-number">2.</span> <span class="nav-text">java的三个体系</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#java%E7%9A%84%E7%89%B9%E7%82%B9"><span class="nav-number">3.</span> <span class="nav-text">java的特点</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#jdk%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80"><span class="nav-number">4.</span> <span class="nav-text">jdk下载地址</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#jdk17%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE"><span class="nav-number">4.1.</span> <span class="nav-text">jdk17环境变量配置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#java%E7%9A%84%E6%89%A7%E8%A1%8C%E5%8E%9F%E7%90%86"><span class="nav-number">5.</span> <span class="nav-text">java的执行原理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E5%9B%BE"><span class="nav-number">5.1.</span> <span class="nav-text">基本原理图</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%B1%BB%E5%91%BD%E5%90%8D%E7%9A%84%E8%A7%84%E8%8C%83"><span class="nav-number">6.</span> <span class="nav-text">类命名的规范</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#jdk%E5%92%8Cjvm%E4%BB%A5%E5%8F%8Ajre"><span class="nav-number">7.</span> <span class="nav-text">jdk和jvm以及jre</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8C%85package"><span class="nav-number">8.</span> <span class="nav-text">包package</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#java%E4%B8%AD%E4%B8%89%E7%A7%8D%E6%B3%A8%E9%87%8A"><span class="nav-number">9.</span> <span class="nav-text">java中三种注释</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%B3%E4%BA%8Emain%E6%96%B9%E6%B3%95%E4%B8%AD%E7%9A%84%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%8F%82%E6%95%B0"><span class="nav-number">10.</span> <span class="nav-text">关于main方法中的虚拟机参数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">11.</span> <span class="nav-text">数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E7%9A%84%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83"><span class="nav-number">11.1.</span> <span class="nav-text">变量的命名规范</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89%E5%8F%98%E9%87%8F%E7%9A%84%E8%AF%AD%E6%B3%95"><span class="nav-number">11.2.</span> <span class="nav-text">定义变量的语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E7%9A%84%E8%B5%8B%E5%80%BC%E6%96%B9%E5%BC%8F"><span class="nav-number">11.3.</span> <span class="nav-text">变量的赋值方式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%B1%BB%E5%9E%8B%E7%9A%84%E8%BD%AC%E6%8D%A2"><span class="nav-number">12.</span> <span class="nav-text">类型的转换</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2023</span> -
+            
+            2023
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">Mu xingyu</a>
+            
+        </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="tools-item flex-center go-to-comments">
+                <i class="fas fa-comment"></i>
+                <span class="post-comments-count"></span>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/dark-light-toggle.js"></script>
+
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/local-search.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/code-block.js"></script>
+
+
+
+
+<div class="post-scripts pjax">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/post-helper.js"></script>
+        
+            <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/libs/anime.min.js"></script>
+        
+        
+            <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/toc.js"></script>
+        
+    
+</div>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
+
+
+
+</body>
+</html>
