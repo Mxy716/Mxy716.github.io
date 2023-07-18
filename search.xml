@@ -659,6 +659,234 @@
       </tags>
   </entry>
   <entry>
+    <title>java02day</title>
+    <url>/2023/07/18/java02day/</url>
+    <content><![CDATA[<h1 id="1-类型转换"><a href="#1-类型转换" class="headerlink" title="1. 类型转换"></a>1. 类型转换</h1><h2 id="1-自动类型转换"><a href="#1-自动类型转换" class="headerlink" title="1. 自动类型转换"></a>1. 自动类型转换</h2><ol>
+<li>小的数据类型可以自动转换成大的数据类型</li>
+<li>小的数据类型和大的数据类型在计算的时候,计算的结果是偏向类型大的一方</li>
+<li>java中看到一个整数,默认是int类型,看到一个小数,默认是double</li>
+<li>java中默认看到的数字都是属于十进制的数据</li>
+</ol>
+<p>支持的转换常见的</p>
+<p>byte-&gt;short-&gt;int-&gt;double</p>
+<p>int-&gt;double</p>
+<p>char-&gt;int</p>
+<h2 id="2-强制类型转换"><a href="#2-强制类型转换" class="headerlink" title="2. 强制类型转换"></a>2. 强制类型转换</h2><blockquote>
+<p>大的数据类型需要强制类型转换成小的数据类型</p>
+<p>语法:    较小的数据类型   变量 &#x3D; (较小的数据类型)大的数据类型变量&#x2F;字面量</p>
+</blockquote>
+<h2 id="3-隐式转换"><a href="#3-隐式转换" class="headerlink" title="3. 隐式转换"></a>3. 隐式转换</h2><blockquote>
+<ol>
+<li><p>如何定义float,可以在double类型的数据后面加上f&#x2F;F</p>
+<p>double-&gt;float</p>
+</li>
+<li><p>在int类型数据后面加上l&#x2F;L,int转换成long类型.推荐L</p>
+</li>
+<li><p>定义double类型,还是推荐在double后面加上d&#x2F;D - 提高可读性</p>
+</li>
+</ol>
+</blockquote>
+<hr>
+<blockquote>
+<p>补充:俩个运算符也是可以进行内部的隐式转换的.+&#x3D; ++ –</p>
+</blockquote>
+<hr>
+<h1 id="2-char类型介绍"><a href="#2-char类型介绍" class="headerlink" title="2. char类型介绍"></a>2. char类型介绍</h1><p>java的char类型使用单引号表示,只能表示单个字符.char在java中是16位的,因为java用的是unicode编码</p>
+<p>并且unicode编码是包含8为的ascii码,char类型在计算的时候使用的就是ascii.</p>
+<p>虽然char和short类型都是占2个字节16bit,char保存的值更大一点,它是无符号的,没有负数.</p>
+<p>char类型可以表示的范围是[0.65535]</p>
+<p>面试:为什么char类型可以保存一个汉字,一个汉字在unicode下面占2个字节.</p>
+<hr>
+<h1 id="3-转义字符"><a href="#3-转义字符" class="headerlink" title="3. 转义字符"></a>3. 转义字符</h1><ol>
+<li><p>\b - 退格</p>
+</li>
+<li><p>双引号和单引号分别是</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">\<span class="string">&quot;  \&#x27;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>\t - 制表符</p>
+</li>
+<li><p>\n - 换行,输出完毕之后,光标停在下一行的起始位置</p>
+</li>
+<li><p>\r - 回车,输出完毕之后,光标停在当前行的起始位置</p>
+</li>
+</ol>
+<hr>
+<p><code>\b,\n,\r - 你在idea的伪终端和计算机的终端呈现的效果可能是不一样的!</code></p>
+<h1 id="4-进制换算"><a href="#4-进制换算" class="headerlink" title="4. 进制换算"></a>4. 进制换算</h1><h2 id="1-二进制"><a href="#1-二进制" class="headerlink" title="1. 二进制"></a>1. 二进制</h2><blockquote>
+<p>由数字0,1组成.int类型表示的十进制的数据在计算机底层是采用32位的二进制数表示的.</p>
+<p>逢2进一</p>
+</blockquote>
+<hr>
+<blockquote>
+<ol>
+<li><p>十进制转二进制</p>
+<p>把十进制数不断除以2,直到商是0结束,倒过来取余数.</p>
+<p>比如10 &#x3D;&gt; 精简的二进制1010</p>
+</li>
+<li><p>二进制转十进制</p>
+<p>将二进制的每个位上的数字从左到右依次乘以2的次方[依次递减]</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="number">1011</span> =&gt; <span class="number">1</span>*<span class="number">2</span>^<span class="number">3</span> + <span class="number">0</span> + <span class="number">1</span>*<span class="number">2</span>^<span class="number">1</span> + <span class="number">1</span>*<span class="number">2</span>^<span class="number">0</span> = <span class="number">11</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+</blockquote>
+<h2 id="2-八进制"><a href="#2-八进制" class="headerlink" title="2. 八进制"></a>2. 八进制</h2><blockquote>
+<p>由数字0,7组成,逢八进一.  定义int类型的时候,数字前面加0,表示的就是八进制</p>
+<ol>
+<li><p>二进制转换八进制</p>
+<p>将二进制的数,从右到左,每三个一组.如果最高位不足3位,补0即可.</p>
+<p>分别计算出每组对应的十进制的数</p>
+<p><code>为甚三个为一组,111-&gt;最大值是7</code></p>
+<p>001 010 101 010 111 &#x3D;&gt; 012527</p>
+</li>
+<li><p>八进制转换二进制</p>
+<p>把八进制的每个数字转换成对应的三位的二进制</p>
+<p>032 &#x3D; 011 010</p>
+</li>
+<li><p>十进制转八进制</p>
+<p>把十进制数不断除以8,直到商是0结束,倒过来取余数.</p>
+<p>26 &#x3D; 032</p>
+</li>
+<li><p>八进制转十进制</p>
+<p>将八进制的每个位上的数字从左到右依次乘以8的次方[依次递减]</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="number">032</span> = <span class="number">3</span>*<span class="number">8</span>^<span class="number">1</span> + <span class="number">2</span>*<span class="number">8</span>^<span class="number">0</span> = <span class="number">26</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+</blockquote>
+<h2 id="3-十六进制"><a href="#3-十六进制" class="headerlink" title="3. 十六进制"></a>3. 十六进制</h2><blockquote>
+<p>数字0,9或者a~f&#x2F;A-F组成,逢16进一</p>
+<p>表示:0xf212   0x00b0</p>
+<ol>
+<li><p>二进制转十六进制</p>
+<p>将二进制的数,从右到左,每四个一组.如果最高位不足4位,补0即可.</p>
+<p>分别计算出每组对应的十进制的数.</p>
+<p>1011 1110 1010 1111 1101 &#x3D;&gt; 0xbeafd</p>
+</li>
+<li><p>十六进制转二进制</p>
+<p>把十六进制的每个数字转换成对应的四位的二进制</p>
+</li>
+</ol>
+</blockquote>
+<hr>
+<h1 id="5-运算符"><a href="#5-运算符" class="headerlink" title="5. 运算符"></a>5. 运算符</h1><h2 id="1-算术运算符"><a href="#1-算术运算符" class="headerlink" title="1. 算术运算符"></a>1. 算术运算符</h2><blockquote>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">+   java中唯一重载的运算符.   纯数值之间表示加法计算,如果中间出现了字符串(<span class="string">&quot;&quot;</span>)表示拼接</span><br><span class="line">-</span><br><span class="line">/   除法,    特殊的场景:取整(纯整数之间)</span><br><span class="line">%   取余/取模</span><br><span class="line"></span><br><span class="line">/和%应用 - 给定一个数字,可以获取出每个位上的数字.</span><br><span class="line"></span><br><span class="line">++ 前++后++</span><br><span class="line"></span><br><span class="line">-- 前--和后--</span><br><span class="line">  </span><br><span class="line">*</span><br><span class="line">  </span><br><span class="line">+= -= /= %= *= </span><br><span class="line">  </span><br><span class="line">= 赋值操作</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h2 id="2-比较运算符"><a href="#2-比较运算符" class="headerlink" title="2. 比较运算符"></a>2. 比较运算符</h2><blockquote>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">&gt; &lt; &gt;= &lt;= ==</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h2 id="3-逻辑运算符"><a href="#3-逻辑运算符" class="headerlink" title="3. 逻辑运算符"></a>3. 逻辑运算符</h2><blockquote>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">逻辑非!  放在<span class="type">boolean</span>表达式/<span class="type">boolean</span>值前面</span><br><span class="line"></span><br><span class="line">&amp;&amp; 逻辑与/短路与 - 作用就是用来连接条件表达式/<span class="type">boolean</span>值</span><br><span class="line">短路的意思就是如果存在多个条件表达式,左边的结果已经能够决定整个结果的话,那么后面的表达式将不会执行.</span><br><span class="line">所有的表达式都是<span class="literal">true</span>的时候,才会返回<span class="literal">true</span></span><br><span class="line"></span><br><span class="line">注意: 将返回结果最有可能是<span class="literal">false</span>的条件表达式放在最左边</span><br><span class="line">  </span><br><span class="line">|| 逻辑或/短路或 - 作用就是用来连接条件表达式/<span class="type">boolean</span>值</span><br><span class="line">短路的意思就是如果存在多个条件表达式,左边的结果已经能够决定整个结果的话,那么后面的表达式将不会执行.</span><br><span class="line">只要存在一个<span class="literal">true</span>,结果就是<span class="literal">true</span> </span><br><span class="line">  </span><br><span class="line">注意: 将返回结果最有可能是<span class="literal">true</span>的条件表达式放在最左边</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h2 id="4-位运算符"><a href="#4-位运算符" class="headerlink" title="4. 位运算符"></a>4. 位运算符</h2><blockquote>
+<p>移位操作 - 移位操作是性能最高的运算</p>
+<p><em><strong>面试题:请你用最高性能的方式计算出2的3次方.  2&lt;&lt;2</strong></em></p>
+</blockquote>
+<blockquote>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">&gt;&gt;  带符号的右移动,向右移动几位,就在最高位补符号位</span><br><span class="line">&gt;&gt;&gt; 不带符号的右移动,向右移动几位,最高位补<span class="number">0</span></span><br><span class="line">&lt;&lt; 左移动</span><br><span class="line"></span><br><span class="line">~ 按位取反</span><br><span class="line"></span><br><span class="line">&amp; 按位与/非短路与</span><br><span class="line">作用<span class="number">1</span>: 也是可以用来连接条件的.也是所有的条件表达式都是<span class="literal">true</span>,才会返回<span class="literal">true</span>.但是所有的表达式都会执行 - 一般不会推荐使用的.</span><br><span class="line">作用<span class="number">2</span>: 用来进行与运算的. 十进制值转换成二进制.在进行与运算的时候,每一个位置一一对应.都是<span class="number">1</span>的时候,计算的结果才是<span class="number">1.</span></span><br><span class="line">     <span class="number">10</span> &amp; <span class="number">8</span> = <span class="number">8</span></span><br><span class="line">     <span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span></span><br><span class="line">     <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span></span><br><span class="line">    ----------</span><br><span class="line">     <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span></span><br><span class="line">应用: 进行一个奇数和偶数的判断.</span><br><span class="line">  </span><br><span class="line">| 按位或/非短路或</span><br><span class="line">作用<span class="number">1</span>: 也是可以用来连接条件的.只要存在一个表达式为<span class="literal">true</span>,就返回<span class="literal">true</span>.但是所有的表达式都会执行 - 一般不会推荐使用的.</span><br><span class="line">作用<span class="number">2</span>: 用来进行或运算的. 十进制值转换成二进制.在进行与运算的时候,每一个位置一一对应.只要有一个<span class="number">1</span>的时候,计算的结果就是<span class="number">1</span></span><br><span class="line">  </span><br><span class="line"><span class="number">10</span> | <span class="number">8</span> = <span class="number">10</span></span><br><span class="line"><span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span></span><br><span class="line"><span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> </span><br><span class="line">-------</span><br><span class="line"><span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span></span><br><span class="line">  </span><br><span class="line">^ 异或,相同为<span class="number">0</span>,不同为<span class="number">1</span></span><br><span class="line"><span class="number">10</span> ^ <span class="number">8</span> = <span class="number">2</span></span><br><span class="line"><span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span></span><br><span class="line"><span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span></span><br><span class="line">-------</span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span></span><br><span class="line">  </span><br><span class="line"><span class="number">10</span> ^ <span class="number">8</span> ^ <span class="number">8</span> = <span class="number">10</span>    结论: 一个数连续异或同一个数俩次,结果是它本身.   未来 - 简单的加密和解密的操作.</span><br><span class="line"></span><br><span class="line"> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span></span><br><span class="line">^ <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span></span><br><span class="line"> -------</span><br><span class="line"> <span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> </span><br><span class="line"> </span><br><span class="line">面试:交换俩个变量的值.</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>负数的二进制该如何计算? - 负数的二进制在计算机中是以补码的形式存在! - 为了计算机简化减法的操作的.</p>
+<p><code>注意:正数的原码,反码以及补码都是它本身</code></p>
+<p>符号位是32bit的二进制的最高位. 0 代表正数,1代表负数</p>
+<p>反码 &#x3D; 对原码进行按位取反[符号位不变]</p>
+<p>补码的公式 &#x3D; 反码 + 1</p>
+<p>-10对应的原码 10000000 00000000 00000000 00001010</p>
+<p>-10反码的反码 11111111 11111111 11111111 11110101</p>
+<p>-10的补码                                                                              +1</p>
+<p>​                           11111111 11111111 11111111 11110110</p>
+<hr>
+<p><code>技巧的东西~9</code>							</p>
+<p>9的二进制 00000000 00000000 00000000 00001001</p>
+<p>~9的结果  11111111 11111111  11111111 11110110</p>
+<p><del>9 &#x3D; -10,总结出***</del>x &#x3D; -(x+1)***</p>
+<hr>
+<p>-10 &gt;&gt;&gt; 2</p>
+<p>00111111111111111111111111111101 &#x3D; 1073741821</p>
+<hr>
+<p>-10&gt;&gt;2 &#x3D; 负数十进制 &#x3D; ~m</p>
+<p>11111111111111111111111111111101 &#x3D; ~2 &#x3D; -3</p>
+<p>00000000000000000000000000000010</p>
+<hr>
+<p><code>练习-15&gt;&gt;2和-15&gt;&gt;2</code></p>
+<hr>
+<h1 id="6-方法的定义和使用"><a href="#6-方法的定义和使用" class="headerlink" title="6. 方法的定义和使用"></a>6. 方法的定义和使用</h1><blockquote>
+<p>方法的定义: 用来完成一段特定代码的片段.  简单理解:就是写了一段逻辑代码,然后把这段代码放入到了方法中了.</p>
+<p>因为这个方法是可以被其他地方调用的,并且调用者是无需关心这个方法内部的细节的 - 仅仅关心在这个方法的功能本身.</p>
+<p>也是为了提高后期程序的可维护性.</p>
+</blockquote>
+<h2 id="1-定义方法的语法"><a href="#1-定义方法的语法" class="headerlink" title="1. 定义方法的语法"></a>1. 定义方法的语法</h2><blockquote>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">定义方法的最全的语法:</span><br><span class="line">修饰符 返回类型 方法名称([参数列表]) [<span class="keyword">throws</span> 异常列表]&#123;</span><br><span class="line">方法体...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">现阶段只需要</span><br><span class="line">修饰符 返回类型 方法名称([参数列表])&#123;</span><br><span class="line">方法体...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h2 id="2-语法解析"><a href="#2-语法解析" class="headerlink" title="2. 语法解析"></a>2. 语法解析</h2><blockquote>
+<p>死记住 - </p>
+<ol>
+<li><p>方法体中绝对不允许定义方法.</p>
+</li>
+<li><p>main方法仍然是程序的主入口 - 必不可少.  因此需要在main方法在中调用自定义的方法.</p>
+</li>
+</ol>
+</blockquote>
+<ol>
+<li><p>修饰符</p>
+<ul>
+<li>访问修饰符 - <strong>public(公共的) private(私有的)</strong> protected(受保护的) 默认的</li>
+<li>其他修饰符 - **static,**final,abstract</li>
+</ul>
+<p>修饰符之间是没有顺序的</p>
+</li>
+<li><p>关于方法的返回类型有两大类</p>
+<ol>
+<li><p>无返回类型 - void</p>
+<p>也是可以存在return语句</p>
+</li>
+<li><p>有返回类型 - 可以是八种基本数据类型或者对象类型[包括自定义对象类型] - String字符串</p>
+<p>方法体中一定含有<strong>return + 返回值的语句;</strong></p>
+</li>
+</ol>
+</li>
+<li><p>方法名 - 命名的规范 - 请你参考变量名 - 小驼峰.</p>
+</li>
+<li><p>参数列表</p>
+<ol>
+<li>无参</li>
+<li>固定长参数</li>
+<li>可变长参数</li>
+</ol>
+</li>
+</ol>
+<h2 id="3-关于static关键字"><a href="#3-关于static关键字" class="headerlink" title="3. 关于static关键字"></a>3. 关于static关键字</h2><p>有static修饰的方法 - 静态方法</p>
+<p>没有static修饰的方法 - 非静态方法 - 普通方法</p>
+<p>静态方法和非静态方法调用的方式是不一样的</p>
+<p><em><strong>通用的规则:</strong></em></p>
+<ol>
+<li><p>非静态方法 - ①创建方法所在类的对象,②通过对象进行调用.</p>
+<p>非静态方法属于对象</p>
+</li>
+<li><p>静态方法 - 允许直接使用类名.静态方法调用的</p>
+<p>静态方法属于类</p>
+</li>
+</ol>
+<p>总结: 属于谁,就由谁去调用!</p>
+<hr>
+<p><code>基于一定的原理之后可以使用的规则</code> - <em><strong>前提方法的定义和方法的调用在同一个类中.</strong></em></p>
+<ol>
+<li>非静态方法中是允许直接调用静态方法或者非静态方法.</li>
+<li>静态方法中是可以直接调用静态方法,但是不允许直接调用非静态方法.</li>
+</ol>
+<hr>
+<h2 id="4-导包操作"><a href="#4-导包操作" class="headerlink" title="4. 导包操作"></a>4. 导包操作</h2><blockquote>
+<p>类的全限定名 - 类的全称 - 包名.类名</p>
+<p>一个包下的某个类调用另外一个包下的某个类中的方法的时候,必须先导包.</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> tech.aistar.day02.method.MethodHelloDemo;</span><br><span class="line"></span><br><span class="line">不建议使用的 - 把method包下的所有的类都导入了 - 影响到性能.</span><br><span class="line"><span class="keyword">import</span> tech.aistar.day02.method.*;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<hr>
+<ol>
+<li>java.lang - java基础包 - 使用到该包下的所有的类,都是无需导包的.默认去到该包下搜索的.</li>
+<li>java.util</li>
+<li>java.sql</li>
+<li>java.text</li>
+<li>java.io</li>
+</ol>
+<hr>
+]]></content>
+  </entry>
+  <entry>
     <title>mysql入门</title>
     <url>/2023/07/12/mysql/</url>
     <content><![CDATA[<h1 id="怎么学习"><a href="#怎么学习" class="headerlink" title="怎么学习"></a>怎么学习</h1><blockquote>
