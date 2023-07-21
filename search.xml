@@ -659,6 +659,217 @@
       </tags>
   </entry>
   <entry>
+    <title>java03day</title>
+    <url>/2023/07/21/java03day/</url>
+    <content><![CDATA[<h1 id="1-方法的定义和使用"><a href="#1-方法的定义和使用" class="headerlink" title="1. 方法的定义和使用"></a>1. 方法的定义和使用</h1><blockquote>
+<p>方法的定义: 用来完成一段特定代码的片段.  简单理解:就是写了一段逻辑代码,然后把这段代码放入到了方法中了.</p>
+<p>因为这个方法是可以被其他地方调用的,并且调用者是无需关心这个方法内部的细节的 - 仅仅关心在这个方法的功能本身.</p>
+<p>也是为了提高后期程序的可维护性.</p>
+</blockquote>
+<h2 id="1-定义方法的语法"><a href="#1-定义方法的语法" class="headerlink" title="1. 定义方法的语法"></a>1. 定义方法的语法</h2><blockquote>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">定义方法的最全的语法:</span><br><span class="line">修饰符 返回类型 方法名称([参数列表]) [<span class="keyword">throws</span> 异常列表]&#123;</span><br><span class="line">方法体...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">现阶段只需要</span><br><span class="line">修饰符 返回类型 方法名称([参数列表])&#123;</span><br><span class="line">方法体...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h2 id="2-语法解析"><a href="#2-语法解析" class="headerlink" title="2. 语法解析"></a>2. 语法解析</h2><blockquote>
+<p>死记住 -</p>
+<ol>
+<li><p>方法体中绝对不允许定义方法.</p>
+</li>
+<li><p>main方法仍然是程序的主入口 - 必不可少.  因此需要在main方法在中调用自定义的方法.</p>
+</li>
+</ol>
+</blockquote>
+<ol>
+<li><p>修饰符</p>
+<ul>
+<li>访问修饰符 - <strong>public(公共的) private(私有的)</strong> protected(受保护的) 默认的</li>
+<li>其他修饰符 - **static,**final,abstract</li>
+</ul>
+<p>修饰符之间是没有顺序的</p>
+</li>
+<li><p>关于方法的返回类型有两大类</p>
+<ol>
+<li><p>无返回类型 - void</p>
+<p>也是可以存在return语句</p>
+</li>
+<li><p>有返回类型 - 可以是八种基本数据类型或者对象类型[包括自定义对象类型] - String字符串</p>
+<p>方法体中一定含有<strong>return + 返回值的语句;</strong></p>
+</li>
+</ol>
+</li>
+<li><p>方法名 - 命名的规范 - 请你参考变量名 - 小驼峰.</p>
+</li>
+<li><p>参数列表</p>
+<ol>
+<li>无参</li>
+<li>固定长参数</li>
+<li>可变长参数</li>
+</ol>
+</li>
+</ol>
+<h2 id="3-关于static关键字"><a href="#3-关于static关键字" class="headerlink" title="3. 关于static关键字"></a>3. 关于static关键字</h2><p>有static修饰的方法 - 静态方法</p>
+<p>没有static修饰的方法 - 非静态方法 - 普通方法</p>
+<p>静态方法和非静态方法调用的方式是不一样的</p>
+<p><em><strong>通用的规则:</strong></em></p>
+<ol>
+<li><p>非静态方法 - ①创建方法所在类的对象,②通过对象进行调用.</p>
+<p>非静态方法属于对象</p>
+</li>
+<li><p>静态方法 - 允许直接使用类名.静态方法调用的</p>
+<p>静态方法属于类</p>
+</li>
+</ol>
+<p>总结: 属于谁,就由谁去调用!</p>
+<hr>
+<p><code>基于一定的原理之后可以使用的规则</code> - <em><strong>前提方法的定义和方法的调用在同一个类中.</strong></em></p>
+<ol>
+<li>非静态方法中是允许直接调用静态方法或者非静态方法.</li>
+<li>静态方法中是可以直接调用静态方法,但是不允许直接调用非静态方法.</li>
+</ol>
+<hr>
+<h2 id="4-导包操作"><a href="#4-导包操作" class="headerlink" title="4. 导包操作"></a>4. 导包操作</h2><blockquote>
+<p>类的全限定名 - 类的全称 - 包名.类名</p>
+<p>一个包下的某个类调用另外一个包下的某个类中的方法的时候,必须先导包.</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> tech.aistar.day02.method.MethodHelloDemo;</span><br><span class="line"></span><br><span class="line">不建议使用的 - 把method包下的所有的类都导入了 - 影响到性能.</span><br><span class="line"><span class="keyword">import</span> tech.aistar.day02.method.*;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<hr>
+<ol>
+<li>java.lang - java基础包 - 使用到该包下的所有的类,都是无需导包的.默认去到该包下搜索的.</li>
+<li>java.util</li>
+<li>java.sql</li>
+<li>java.text</li>
+<li>java.io</li>
+</ol>
+<hr>
+<h2 id="5-私有方法的应用场景"><a href="#5-私有方法的应用场景" class="headerlink" title="5. 私有方法的应用场景"></a>5. 私有方法的应用场景</h2><blockquote>
+<ol>
+<li><p>简化api - 方便程序的,减少对程序员的干扰</p>
+</li>
+<li><p>场景</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">NB-Util类 - NB的方法 - 非常复杂的</span><br><span class="line">     </span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">nb01</span><span class="params">()</span>&#123;</span><br><span class="line">  <span class="comment">//非常复杂的业务逻辑 - coding</span></span><br><span class="line">  <span class="comment">//common...公开的重复的代码</span></span><br><span class="line">  commonNb();</span><br><span class="line">&#125;</span><br><span class="line">   </span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">nb02</span><span class="params">()</span>&#123;</span><br><span class="line">  <span class="comment">//非常复杂的业务逻辑 - coding</span></span><br><span class="line">  <span class="comment">//common - 公开的重复的代码</span></span><br><span class="line">  commonNb();</span><br><span class="line">&#125;</span><br><span class="line">   </span><br><span class="line"><span class="comment">//commonNb单独拿出用的话 - 到底有没有用.</span></span><br><span class="line"><span class="comment">//如果单独被调用,不会产生什么业务功能的话</span></span><br><span class="line">   </span><br><span class="line"><span class="comment">//&quot;小螺丝的代码,不需要对外公开的代码 - 有必要定义成私有的&quot;</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">commonNb</span><span class="params">()</span>&#123;</span><br><span class="line">     </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+</blockquote>
+<hr>
+<h1 id="2-递归算法"><a href="#2-递归算法" class="headerlink" title="2. 递归算法"></a>2. 递归算法</h1><blockquote>
+<p>使用解决大量的需要重复计算的业务.<code>和循环算法比较起来的话 - 递归算法性能是比较低下,需要保存中间的临时的值</code></p>
+</blockquote>
+<blockquote>
+<ol>
+<li>递 - 将一个问题,分解成若干个子问题.并且发现这些子问题的解决过程是重复的&#x2F;一样的.</li>
+<li>归 - 一定要指定一个递归的出口 - 临界值 - 不符合”递”的条件.</li>
+</ol>
+</blockquote>
+<hr>
+<p>递归的步骤</p>
+<ol>
+<li>指定递归出口,如果没有指定递归出口,抛出java.lang.StackOverflowError</li>
+<li>方法体中调用自己.</li>
+</ol>
+<hr>
+<p>练习:</p>
+<ol>
+<li><p><strong>求<em>斐波那契</em>数列</strong></p>
+<p><strong>1 1 2 3 5 8 13 21 34 55 …</strong></p>
+</li>
+<li><p><strong>求阶乘</strong></p>
+</li>
+</ol>
+<hr>
+<ol>
+<li><p>求出俩个数的最大公约数 - 辗除法</p>
+</li>
+<li><p>求杨辉三角坐标的数值</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">1</span> <span class="number">1</span></span><br><span class="line"><span class="number">1</span> <span class="number">2</span> <span class="number">1</span></span><br><span class="line"><span class="number">1</span> <span class="number">3</span> <span class="number">3</span> <span class="number">1</span></span><br><span class="line"><span class="number">1</span> <span class="number">4</span> <span class="number">6</span> <span class="number">4</span> <span class="number">1</span></span><br><span class="line"><span class="number">1</span> <span class="number">5</span> <span class="number">10</span> <span class="number">10</span> <span class="number">5</span> <span class="number">1</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>自闭题 - 给定一个数字,依次按照顺序输出这个数字每位上的数字</p>
+<p>比如1234, 直接输出1 2 3 4 &#x3D;&gt; &#x2F; %</p>
+<p>1234&#x2F;10 &#x3D; 123 &#x2F; 10 &#x3D; 12 &#x2F; 10 &#x3D; 1 % 10 &#x3D; 1</p>
+<p>5 &#x3D;&gt; 5%10&#x3D;5</p>
+<hr>
+</li>
+</ol>
+<h1 id="3-方法的重载"><a href="#3-方法的重载" class="headerlink" title="3. 方法的重载"></a>3. 方法的重载</h1><blockquote>
+<p>简化api - 方便调用</p>
+<p>overload</p>
+<p>发生的条件</p>
+<ol>
+<li><p>重载的方法是在同一个类中.</p>
+</li>
+<li><p>重载的方法的名称是相同的</p>
+</li>
+<li><p>重载的方法的参数列表一定不同</p>
+<p>3-1. 个数一样,类型不一样</p>
+<p>3-2. 个数不一样</p>
+</li>
+<li><p>重载的方法返回类型可以一样&#x2F;不一样</p>
+</li>
+</ol>
+</blockquote>
+<hr>
+<h1 id="4-java-lang-Math-C"><a href="#4-java-lang-Math-C" class="headerlink" title="4. java.lang.Math[C]"></a>4. java.lang.Math[C]</h1><blockquote>
+<p>学习如何使用api学习手册 - 如何使用jdk中内置的类中的有用的方法.</p>
+</blockquote>
+<blockquote>
+<p><code>Math</code>类包含执行基本数字运算的方法，如基本指数，对数，平方根和三角函数。</p>
+</blockquote>
+<blockquote>
+<p>发现方法都是采用static修饰的,直接使用类名来调用.</p>
+</blockquote>
+<blockquote>
+<p>常见的方法:max,min,abs,pow,sqrt,random</p>
+<p>笔试:floor和round</p>
+</blockquote>
+<h1 id="5-条件分支语句"><a href="#5-条件分支语句" class="headerlink" title="5. 条件分支语句"></a>5. 条件分支语句</h1><ol>
+<li>if-else语句 - 比较灵活.<ul>
+<li>if语句可以单独使用.如果if块中只有一行代码,那么{}省略不写的.</li>
+<li>if括号中只能是boolean值或者条件表达式,为true,则进入{}中执行</li>
+<li>if和else , true&#x3D;&gt;if块,false&#x3D;&gt;else块,else块中如果只有一行代码,同样{}可以省略不写的.</li>
+<li>if-else if - else if - else - 注意条件之间要互斥.</li>
+<li>if或者else都是允许嵌套使用的.</li>
+</ul>
+</li>
+<li>switch-case语句</li>
+<li>三元操作符 - 三目运算符</li>
+</ol>
+<hr>
+<h1 id="6-循环语句"><a href="#6-循环语句" class="headerlink" title="6. 循环语句"></a>6. 循环语句</h1><h2 id="1-for循环"><a href="#1-for循环" class="headerlink" title="1. for循环"></a>1. for循环</h2><p>for循环分类 - <em><strong>单层for循环</strong></em>以及<em><strong>嵌套for循环</strong></em>,但是不推荐超过3层for,嵌套越多,性能越低.</p>
+<ol>
+<li><p>单层for循环语法</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>循环的复合形态 - 不推荐使用 - 可读性比较差</span><br><span class="line"><span class="keyword">for</span>(同时初始化俩个变量;表达式②;表达式③)&#123;</span><br><span class="line">  <span class="comment">//循环体...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(表达式①;表达式②;表达式③)&#123;</span><br><span class="line">  <span class="comment">//循环体</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">表达式① - 变量因子的初始化,比如<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">          只会走一次</span><br><span class="line">            </span><br><span class="line">表达式② - 循环退出的条件,比如i&lt;<span class="number">3</span>;</span><br><span class="line">          表达式②返回<span class="literal">true</span>,才会进入到循环体中去执行.否则,直接退出循环.</span><br><span class="line">          至少走一次</span><br><span class="line">            </span><br><span class="line">          循环体走完,走表达式③</span><br><span class="line">            </span><br><span class="line">表达式③ - 变量因子每次循环的变化; 比如,i++</span><br><span class="line">          可能执行,可能不执行.</span><br></pre></td></tr></table></figure>
+
+<p><code>表达式省略的场景,常见的俩种</code></p>
+<ol>
+<li>表达式③省略了</li>
+<li>三个表达式都省略了 - 死循环 - 循环体中必然会出现打破循环的语句.</li>
+</ol>
+</li>
+<li><p>嵌套for循环</p>
+</li>
+</ol>
+   <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//外层for循环</span></span><br><span class="line"><span class="keyword">for</span>(表达式①;表达式②;表达式③)&#123;</span><br><span class="line">  <span class="comment">//内层for循环 - 作为外部循环的循环体</span></span><br><span class="line">  <span class="keyword">for</span>(表达式③;表达式④;表达式⑤)&#123;</span><br><span class="line">  	<span class="comment">//循环体</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">外部循环执行一次,内层循环执行全部.</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="作业"><a href="#作业" class="headerlink" title="作业"></a>作业</h1><blockquote>
+<ol>
+<li><p>打印图形.</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">*</span><br><span class="line">     * *</span><br><span class="line">    *   *</span><br><span class="line">   *     *</span><br><span class="line">  *       *</span><br><span class="line">   *     *</span><br><span class="line">    *   *</span><br><span class="line">     * * </span><br><span class="line">      *   </span><br></pre></td></tr></table></figure>
+</li>
+<li><p>阶乘和斐波那契数列 - for循环实现一遍</p>
+</li>
+<li><p>打印所有这样的组合,这个组合是三位数.  数字是由1,2,3,4当中的三个组成.</p>
+<p>但是不能出现重复的数据.  比如合法的1,2,3   总共:24个</p>
+<p><code>增加难度:没打印6个换一行!</code></p>
+</li>
+<li><p>关于阶乘的题目</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">定义一个方法,传入一个参数,比如传入的是<span class="number">6.</span></span><br><span class="line">程序最终输出的结果,必须是下面的:</span><br><span class="line"><span class="number">1</span>!=<span class="number">1</span></span><br><span class="line"><span class="number">2</span>!=<span class="number">2</span></span><br><span class="line"><span class="number">3</span>!=<span class="number">6</span></span><br><span class="line"><span class="number">4</span>!=<span class="number">24</span></span><br><span class="line"><span class="number">5</span>!=<span class="number">120</span></span><br><span class="line"><span class="number">6</span>!=<span class="number">720</span></span><br><span class="line">  </span><br><span class="line"><span class="number">1</span>! + <span class="number">2</span>! + <span class="number">3</span>! + <span class="number">4</span>! + <span class="number">5</span>! + <span class="number">6</span>!=<span class="number">873</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+</blockquote>
+<hr>
+]]></content>
+  </entry>
+  <entry>
     <title>java02day</title>
     <url>/2023/07/18/java02day/</url>
     <content><![CDATA[<h1 id="1-类型转换"><a href="#1-类型转换" class="headerlink" title="1. 类型转换"></a>1. 类型转换</h1><h2 id="1-自动类型转换"><a href="#1-自动类型转换" class="headerlink" title="1. 自动类型转换"></a>1. 自动类型转换</h2><ol>
@@ -885,6 +1096,331 @@
 </ol>
 <hr>
 ]]></content>
+  </entry>
+  <entry>
+    <title>java04day</title>
+    <url>/2023/07/21/java04day/</url>
+    <content><![CDATA[<h1 id="1-continue和break语句"><a href="#1-continue和break语句" class="headerlink" title="1. continue和break语句"></a>1. continue和break语句</h1><ol>
+<li><p>学会使用debug - 调试代码的 - 单步调试</p>
+</li>
+<li><p>continue - 跳过本轮循环,但是会继续下一轮循环.  continue语句下面是不能够出现代码的.</p>
+<p>continue语句只能出现在循环体中.</p>
+</li>
+<li><p>break - 1.  打破循环,但是只能打破它所在的那一层循环.2. 跳出代码块 - 自命名&#x2F;switch块</p>
+</li>
+</ol>
+<hr>
+<p>自信题 - 输出2~199之间所有的质数&#x2F;素数,每输出7个换一行.</p>
+<p><code>质数- 一个数只能由1和它自己本身整除.</code></p>
+<h1 id="2-三元操作符"><a href="#2-三元操作符" class="headerlink" title="2. 三元操作符"></a>2. 三元操作符</h1><ol>
+<li><p>表达式?result1:result2</p>
+<p>简单替代if-else使用,表达式为true,则执行result1,否则执行result2</p>
+</li>
+<li><p>嵌套使用的 - 不推荐使用.</p>
+</li>
+</ol>
+<h1 id="3-switch块"><a href="#3-switch块" class="headerlink" title="3. switch块"></a>3. switch块</h1><p>隶属条件分支语句.语法如下:</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">switch</span>(变量)&#123;</span><br><span class="line">  <span class="keyword">case</span> 具体值<span class="number">1</span>:</span><br><span class="line">    <span class="comment">//代码</span></span><br><span class="line">    [<span class="keyword">break</span>;]</span><br><span class="line">  <span class="keyword">case</span> 具体值<span class="number">2</span>:</span><br><span class="line">     <span class="comment">//代码</span></span><br><span class="line">     [<span class="keyword">break</span>;]</span><br><span class="line">  ...</span><br><span class="line">  [<span class="keyword">default</span>:</span><br><span class="line">  	 <span class="comment">//代码</span></span><br><span class="line">     [<span class="keyword">break</span>;]</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li><p>括号中可以允许的类型只能是<em><strong>byte,short,int,char</strong></em>,String[jdk7.x],enum(枚举类型,jdk5.x)以及Byte,Short,Integer,Character</p>
+</li>
+<li><p>括号中的变量的值如何能够匹配某个case后面的具体值,那么则进入到具体的case块中执行</p>
+<p><code>case后面的值不能够是表达式,比如n&gt;2,只能是具体的值</code></p>
+<ul>
+<li>如果case块中存在break语句,执行完毕之后,跳出switch块</li>
+<li>如果case块中不存在break语句,则会继续进入到下一个case块,直到遇到break,否则一直走到最后.</li>
+</ul>
+</li>
+<li><p>匹配不到任何值,则会进入到default,前提是提供了default</p>
+<p><code>default块的位置 - 任何位置,推荐放在末尾[break没有必要写]</code></p>
+</li>
+<li><p>jdk17对switch语法进行了升级.</p>
+</li>
+</ol>
+<hr>
+<p><code>能用switch-case解决的一定可以用if-else if-else去解决,后者的语法更加灵活 - 推荐后者的 - 后期代码的维护</code></p>
+<hr>
+<h1 id="4-while"><a href="#4-while" class="headerlink" title="4. while"></a>4. while</h1><p>和for一样,都是属于<em><strong>后置循环.</strong></em>  先判断条件是否成立,成立才会进入到循环体中去执行.</p>
+<p>语法</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span>(条件表达式)&#123;</span><br><span class="line"> 	<span class="comment">//循环体 - 条件为true,否则跳出循环</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span>(<span class="literal">true</span>)&#123;死循环&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>while循环应用的场景 - 一个业务不知道循环多少次!但是知道循环退出的条件!</code></p>
+<p><code>自信题:给你一个数字,输出它的位数</code>,比如传入了一个数字435,返回3</p>
+<p><code>思路: 435/10 = 43 / 10 = 4 / 10 = 0</code></p>
+<h1 id="5-do-while"><a href="#5-do-while" class="headerlink" title="5. do-while"></a>5. do-while</h1><p>特点:属于<strong>前置循环</strong>,初始的时候,即使这个条件不成立,也会先进入到循环体中去执行一次.然后再进行条件的判断,成立则继续循环,否则退出.</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">do</span>&#123;</span><br><span class="line">  <span class="comment">//循环体...</span></span><br><span class="line">&#125;<span class="keyword">while</span>(条件表达式);</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="6-循环练习"><a href="#6-循环练习" class="headerlink" title="6. 循环练习"></a>6. 循环练习</h1><p><img src="/2023/07/21/java04day/%E8%AF%95%E9%A2%98.jpg"> </p>
+<hr>
+<h1 id="7-数组的定义和使用"><a href="#7-数组的定义和使用" class="headerlink" title="7. 数组的定义和使用"></a>7. 数组的定义和使用</h1><h2 id="1-数组的介绍"><a href="#1-数组的介绍" class="headerlink" title="1. 数组的介绍"></a>1. 数组的介绍</h2><blockquote>
+<p>数据结构:数组,链表[单向和双向],树[二叉树,平衡二叉树,b树,b+树,红黑树],图,栈,队列…</p>
+<p>数组是java内存中用来存储一组同一类型的数据的”容器”,数组是有序的[允许通过下标进行访问].</p>
+</blockquote>
+<blockquote>
+<p><strong>数组也是属于对象类型</strong> - 数组本身是存在jvm的堆区.</p>
+</blockquote>
+<h2 id="2-定义数组的语法"><a href="#2-定义数组的语法" class="headerlink" title="2. 定义数组的语法"></a>2. 定义数组的语法</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">数据类型 变量名 = 初始值;</span><br><span class="line"></span><br><span class="line"><span class="comment">//注意:元素类型是数组中可以存储的数据的类型 </span></span><br><span class="line"><span class="comment">//允许是基本数据类型以及对象类型(比如String)</span></span><br><span class="line">元素类型[] 数组对象名 = <span class="keyword">new</span> 元素类型[数组长度];</span><br><span class="line">或者</span><br><span class="line">元素类型 数组对象名[] = <span class="keyword">new</span> 元素类型[数组长度];</span><br><span class="line"></span><br><span class="line">定义数组必不可少的俩个条件</span><br><span class="line"><span class="number">1.</span> 元素类型 - 决定了数组中可以存储数据的类型.</span><br><span class="line"><span class="number">2.</span> 数组的长度 - 决定了数组中存储数据的个数.</span><br><span class="line">  </span><br><span class="line"><span class="comment">//arr这个数组的类型是什么? - int[] - 整数型数组</span></span><br><span class="line"><span class="type">int</span>[] arr = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">3</span>];</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="3-关于数组的赋值"><a href="#3-关于数组的赋值" class="headerlink" title="3. 关于数组的赋值"></a>3. 关于数组的赋值</h2><blockquote>
+<p>如果仅仅是定义了数组,没有进行赋值的话,那么系统会根据元素类型来给定默认值.</p>
+<p>byte,short,int,long 默认值都是0</p>
+<p>float,double默认值都是0.0</p>
+<p>char默认值是’’,boolean默认值是false</p>
+<p><em><strong>对象类型默认值全部是null</strong></em></p>
+</blockquote>
+<ol>
+<li><p>先定义数组,然后通过下标一一赋值</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span>[] arr = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">3</span>];</span><br><span class="line">arr[<span class="number">0</span>] = <span class="number">10</span>;</span><br><span class="line">arr[<span class="number">1</span>] = <span class="number">20</span>;</span><br><span class="line">arr[<span class="number">2</span>] = <span class="number">30</span>;</span><br><span class="line"></span><br><span class="line">arr[<span class="number">3</span>] = <span class="number">50</span>;<span class="comment">//编译是Ok的,但是程序现在运行的过程中会抛出异常 - java.lang.ArrayIndexOutOfBoundsException数组下标越界异常</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>定义数组的时候,立即赋值</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String[] arr = <span class="keyword">new</span> <span class="title class_">String</span>[]&#123;<span class="string">&quot;abc&quot;</span>,<span class="string">&quot;def&quot;</span>,<span class="string">&quot;123&quot;</span>&#125;;</span><br><span class="line">或者</span><br><span class="line"><span class="type">char</span>[] arr = &#123;<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;c&#x27;</span>&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>数组的属性 - length</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">数组对象.length =&gt; 获取数组的长度 - 数组中存储的数据的个数</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>通过普通for循环进行赋值</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span>[] arr = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">3</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>;i&lt;arr.length;i++)&#123;</span><br><span class="line">  arr[i] = (<span class="type">int</span>)(Math.random()*<span class="number">100</span>+<span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>通过数组工具类进行赋值</code></p>
+</li>
+</ol>
+<h2 id="4-数组的遍历"><a href="#4-数组的遍历" class="headerlink" title="4. 数组的遍历"></a>4. 数组的遍历</h2><ol>
+<li><p>通过下标一一遍历</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span>[] arr = &#123;<span class="number">1</span>,<span class="number">23</span>,<span class="number">3</span>&#125;;</span><br><span class="line">System.out.println(arr[<span class="number">0</span>]);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>通过普通for循环进行获取</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>;i&lt;arr.length;i++)&#123;</span><br><span class="line">  System.out.println(arr[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>通过增强for循环 - jdk5.0开始提供的 - <strong>底层是迭代器</strong></p>
+<p><code>只读for</code></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(元素类型 变量:数组对象名)&#123;</span><br><span class="line">  <span class="comment">//输出这个变量</span></span><br><span class="line">  <span class="comment">//此处的变量不是下标 - 就是数组中的当前元素</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> e:arr)&#123;</span><br><span class="line">  System.out.println(e);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>通过数组工具类进行遍历</p>
+<p>java.util.Arrays - 提供了大量的操作数组的方法.</p>
+<p>static String toString(int[] arr);</p>
+</li>
+<li><p>自定义数组输出的方式.</p>
+</li>
+</ol>
+<hr>
+<h1 id="8-数组的底层"><a href="#8-数组的底层" class="headerlink" title="8. 数组的底层"></a>8. 数组的底层</h1><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span>[] arr1 = <span class="keyword">new</span> <span class="title class_">int</span>[]&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span>[] arr2 = &#123;<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>&#125;;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> tech.aistar.day04;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 本来用来演示: 数组在jvm内存中的形式</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> success</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2023/7/20 15:11:02</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ArrayMemoryDemo</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">//①通过new关键字,会在堆中开辟一个区域,申请空间</span></span><br><span class="line">        <span class="comment">//②然后给这个对象进行初始化</span></span><br><span class="line">        <span class="comment">//③将这个对象在堆空间中的内存地址赋值给了一个引用变量arr1,然后存储在栈区</span></span><br><span class="line">        <span class="type">int</span>[] arr1 = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;;</span><br><span class="line">        System.out.println(arr1);<span class="comment">//[I@7ad041f3</span></span><br><span class="line"></span><br><span class="line">        <span class="type">int</span>[] arr2 = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;;</span><br><span class="line">        System.out.println(arr2);<span class="comment">//[I@251a69d7</span></span><br><span class="line">        <span class="comment">//==在java中永远永远比较的值</span></span><br><span class="line">        System.out.println(arr1 == arr2);<span class="comment">//false</span></span><br><span class="line"></span><br><span class="line">        System.out.println(Arrays.equals(arr1,arr2));<span class="comment">//true</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//TODO... char类型数组比较特殊一点</span></span><br><span class="line">        <span class="type">char</span>[] crr = &#123;<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;c&#x27;</span>&#125;;</span><br><span class="line">        System.out.println(crr);<span class="comment">//abc</span></span><br><span class="line">        System.out.println(<span class="string">&quot;&quot;</span>+crr);<span class="comment">//[C@251a69d7</span></span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">&quot;====引用和对象之间的关系 - 提前学习 - 种子====&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//创建了一个数组对象arr3 =&gt; 认为arr3是对象的名称   =&gt; 这句话是不对的</span></span><br><span class="line">        <span class="comment">//因为arr3仅仅是这个数组对象的引用而已.</span></span><br><span class="line">        <span class="type">int</span>[] arr3 = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//引用和对象之间是一个什么关系呢?</span></span><br><span class="line">        <span class="comment">//引用里面保存的就是对象在堆空间中的内存地址.</span></span><br><span class="line">        <span class="comment">//引用和对象之间的映射关系 - 符合&quot;气球🎈理论&quot;</span></span><br><span class="line">        <span class="comment">//1. 一个引用在某个时刻只能指向一个对象</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//2. 一个对象在某个时刻可以被多个引用指向.</span></span><br><span class="line">        <span class="type">int</span>[] arr4 = arr3;</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">&quot;=======垃圾对象 - 没有任何引用指向的对象=========&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="type">int</span>[] arr5 = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;;</span><br><span class="line">        <span class="comment">//arr5重新赋值了 - null,代表arr5已经不再指向原来的对象&#123;1,2,3&#125;</span></span><br><span class="line">        <span class="comment">//&#123;1,2,3&#125;这对象已经没有任何引用指向了 -&gt; 垃圾对象 =&gt; 等待GC回收</span></span><br><span class="line">        <span class="comment">//int[] arr6 = arr5;</span></span><br><span class="line">        arr5 = <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//System.out.println(Arrays.toString(arr6));</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="9-方法的参数的传递方式"><a href="#9-方法的参数的传递方式" class="headerlink" title="9. 方法的参数的传递方式"></a>9. 方法的参数的传递方式</h1><p><code>面试官希望得到的答案</code></p>
+<ol>
+<li><strong>基本类型采用值传递</strong> - 将变量中保存的基本类型的数据拷贝一份给方法的形参.</li>
+<li><strong>对象类型采用地址传递&#x2F;引用传递</strong> - 将引用变量保存的对象的内存地址拷贝一份给方法的形参.</li>
+</ol>
+<p><code>字符串String虽然是对象类型,但是具备值传递的特点的</code></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">main:</span><br><span class="line">  <span class="type">String</span> <span class="variable">s</span> <span class="operator">=</span> <span class="string">&quot;good&quot;</span>;</span><br><span class="line">  change(s);</span><br><span class="line">  打印s good</span><br><span class="line">    </span><br><span class="line">change:</span><br><span class="line">  s = <span class="string">&quot;test&quot;</span>;</span><br><span class="line">  打印s =&gt; test</span><br></pre></td></tr></table></figure>
+
+<hr>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span>&#123;</span><br><span class="line">  <span class="type">String</span> <span class="variable">str</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">&quot;good&quot;</span>);<span class="comment">//对象类型-但是具备值传递的特点的</span></span><br><span class="line">  </span><br><span class="line">  <span class="type">char</span>[] ch = &#123;<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;c&#x27;</span>&#125;;<span class="comment">//对象类型</span></span><br><span class="line">  </span><br><span class="line">  change(str,ch);</span><br><span class="line">  </span><br><span class="line">  <span class="comment">//str=&gt; good</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment">//ch &#123;&#x27;g&#x27;,&#x27;b&#x27;,&#x27;c&#x27;&#125;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">change</span><span class="params">(String str,<span class="type">char</span>[] ch)</span>&#123;</span><br><span class="line">  str = <span class="string">&quot;test ok&quot;</span>;</span><br><span class="line">  ch[<span class="number">0</span>] = <span class="string">&#x27;g&#x27;</span></span><br><span class="line">    </span><br><span class="line">  <span class="comment">//打印str =&gt; &quot;test ok&quot;</span></span><br><span class="line">    <span class="comment">//ch =&gt; gbc</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p><code>最正确的理论 - Java中只有值传递</code></p>
+<hr>
+<h1 id="10-作业"><a href="#10-作业" class="headerlink" title="10. 作业"></a>10. 作业</h1><ol>
+<li><p>while循环实现俩个数的最大公约数.</p>
+</li>
+<li><p>while实现十进制转成二进制,比如5&#x3D;&gt;101,10&#x3D;&gt;1010</p>
+</li>
+<li><p>给定一个数字,然后逆序输出.比如12345,输出54321</p>
+</li>
+<li><p>双色球案例</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">比如定义一个数组-长度是<span class="number">5.</span></span><br><span class="line">然后通过普通<span class="keyword">for</span>循环对数组进行赋值,值的范围[<span class="number">1</span>,<span class="number">6</span>]之间的随机整数.</span><br><span class="line">要求是最终的数组中不能出现重复的数据.</span><br></pre></td></tr></table></figure></li>
+</ol>
+<hr>
+]]></content>
+  </entry>
+  <entry>
+    <title>java05day</title>
+    <url>/2023/07/21/java05day/</url>
+    <content><![CDATA[<h1 id="1-二维数组"><a href="#1-二维数组" class="headerlink" title="1. 二维数组"></a>1. 二维数组</h1><blockquote>
+<p>回忆定义一维数组</p>
+<p>元素类型[] 变量 &#x3D; new 元素类型[长度]</p>
+<p><code>元素类型 - 1. 决定了数组中可以存储的数据类型;2.元素类型可以是八种基本数据类型以及对象类型</code></p>
+<p><code>数组本身就是一个对象类型 - int[]</code></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">比如<span class="type">int</span>[][] arr = <span class="keyword">new</span> <span class="title class_">int</span>[rows][cols];</span><br><span class="line">或者<span class="type">int</span> arr[][] = <span class="keyword">new</span> <span class="title class_">int</span>[rows][cols];</span><br></pre></td></tr></table></figure>
+
+<p><code>二维数组中的每个元素都是一维数组</code></p>
+</blockquote>
+<h2 id="2-赋值方式"><a href="#2-赋值方式" class="headerlink" title="2. 赋值方式"></a>2. 赋值方式</h2><blockquote>
+<ol>
+<li><p>可以通过下标一一赋值</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">arr[<span class="number">0</span>][<span class="number">0</span>] = <span class="number">10</span>;</span><br></pre></td></tr></table></figure></li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="2">
+<li><p>定义数组的同时进行赋值</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span>[][] arr = <span class="keyword">new</span> <span class="title class_">int</span>[][]&#123;&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;,&#123;<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>&#125;,&#123;<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>&#125;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span>[][] arr1 = &#123;&#123;<span class="number">1</span>,<span class="number">2</span>&#125;,&#123;<span class="number">3</span>,<span class="number">4</span>&#125;,&#123;<span class="number">5</span>,<span class="number">6</span>&#125;&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>先定义数组,然后一行一行进行赋值</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span>[][] arr = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">2</span>][<span class="number">3</span>];</span><br><span class="line"></span><br><span class="line">arr[<span class="number">0</span>] = <span class="keyword">new</span> <span class="title class_">int</span>[]&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;;</span><br><span class="line">arr[<span class="number">1</span>] = <span class="keyword">new</span> <span class="title class_">int</span>[]&#123;<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//但是不能这样写</span></span><br><span class="line"><span class="comment">//arr[0]=&#123;5,6,7&#125;;//编译是错误的</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>定义一个不规则的二维数组,定义二维数组的时候,列是可以省略不写的</p>
+<p><code>但是使用之前需要先初始化</code></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span>[][] arr = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">3</span>][];</span><br><span class="line">arr[<span class="number">0</span>] = <span class="keyword">new</span> <span class="title class_">int</span>[]&#123;<span class="number">1</span>&#125;;</span><br><span class="line">arr[<span class="number">1</span>] = <span class="keyword">new</span> <span class="title class_">int</span>[]&#123;<span class="number">1</span>,<span class="number">1</span>&#125;;</span><br><span class="line">arr[<span class="number">2</span>] = <span class="keyword">new</span> <span class="title class_">int</span>[]&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">1</span>&#125;;</span><br><span class="line">      </span><br><span class="line">或者</span><br><span class="line"><span class="type">int</span>[][] arr5 = &#123;&#123;<span class="number">100</span>&#125;,&#123;<span class="number">100</span>,<span class="number">200</span>&#125;,&#123;<span class="number">100</span>,<span class="number">300</span>&#125;&#125;;</span><br></pre></td></tr></table></figure></li>
+</ol>
+</blockquote>
+<h2 id="3-遍历方式"><a href="#3-遍历方式" class="headerlink" title="3. 遍历方式"></a>3. 遍历方式</h2><blockquote>
+<ol start="0">
+<li>通过下标一一输出</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol>
+<li><p>遍历方式一</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span>[][] arr = <span class="keyword">new</span> <span class="title class_">int</span>[][]&#123;&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;,&#123;<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>&#125;,&#123;<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>&#125;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>;i&lt;arr.length;i++)&#123;</span><br><span class="line">  System.out.println(Arrays.toString(arr[i]));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>双层for循环遍历</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>;i&lt;arr.length;i++)&#123;</span><br><span class="line">  <span class="comment">//int[] temp = arr[i];</span></span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">0</span>;j&lt;arr[i].length;j++)&#123;</span><br><span class="line">    System.out.print(arr[i][j]+<span class="string">&quot;\t&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  System.out.println();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>双层增强for循环</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="type">int</span>[] e:arr)&#123;</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> t:e)&#123;</span><br><span class="line">     System.out.print(t+<span class="string">&quot;\t&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  System.out.println();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="4">
+<li>数组工具类java.util.Arrays提供的static String deepToString(数组对象);</li>
+</ol>
+</blockquote>
+<h1 id="2-数组的拷贝"><a href="#2-数组的拷贝" class="headerlink" title="2. 数组的拷贝"></a>2. 数组的拷贝</h1><blockquote>
+<p>数组中内存中一块连续的空间-并且<code>数组的大小(长度)一旦确定了 - 内存中是绝对不允许修改的</code></p>
+<p><code>业务中实现数组的 - 只要涉及到影响到数组的大小 - 增加/删除/去重 - 不存在这些操作的</code></p>
+</blockquote>
+<hr>
+<blockquote>
+<ol>
+<li><p>java.util.Arrays</p>
+<p>static int[] copyOf(int[] original,int newLength);&#x2F;&#x2F;适合在末尾添加数据</p>
+<table>
+<thead>
+<tr>
+<th><code>static int[]</code></th>
+<th><code>copyOf(int[] original, int newLength)</code>复制指定的数组，用零截取或填充（如有必要），以便复制具有指定的长度。</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td>original - 原来的数组,newLength&#x3D;&gt;新数组长度</td>
+</tr>
+</tbody></table>
+</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="2">
+<li><p>java.lang.System</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">System.arraycopy(original, <span class="number">0</span>, copy, <span class="number">0</span>,Math.min(original.length, newLength));</span><br><span class="line"><span class="number">1.</span> origginal - 原数组</span><br><span class="line"><span class="number">2.</span> <span class="number">0</span> - 从原数组的哪个下标开始拷贝</span><br><span class="line"><span class="number">3.</span> copy - 目标数组</span><br><span class="line"><span class="number">4.</span> <span class="number">0</span> - 拷贝到目标数组的哪个位置(下标处)</span><br><span class="line"><span class="number">5.</span> 最后一个长度 - 拷贝的个数</span><br></pre></td></tr></table></figure></li>
+</ol>
+</blockquote>
+<h1 id="N-数组排序"><a href="#N-数组排序" class="headerlink" title="N. 数组排序"></a>N. 数组排序</h1><h2 id="1-冒泡排序"><a href="#1-冒泡排序" class="headerlink" title="1. 冒泡排序"></a>1. 冒泡排序</h2><p><strong>相邻的</strong>俩个进行<strong>俩俩</strong>比较.每一轮比较完 - 确定一个最值</p>
+<p><img src="/2023/07/21/java05day/bubble.gif"> </p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">猴子🐒玉米 =&gt; 摘一个玉米,和手上的进行比较.保留最小的.</span><br><span class="line">每次循环也是确定一个最值</span><br><span class="line">  </span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 冒泡排序 - 从小到大</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> arr</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">bubbleSort</span><span class="params">(<span class="type">int</span>[] arr)</span>&#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">0</span>; j &lt; arr.length-<span class="number">1</span>-i; j++) &#123;</span><br><span class="line">      <span class="keyword">if</span>(arr[j]&gt;arr[j+<span class="number">1</span>])&#123;</span><br><span class="line">        arr[j] = arr[j]^arr[j+<span class="number">1</span>];</span><br><span class="line">        arr[j+<span class="number">1</span>] = arr[j]^arr[j+<span class="number">1</span>];</span><br><span class="line">        arr[j] = arr[j]^arr[j+<span class="number">1</span>];</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-选择排序"><a href="#2-选择排序" class="headerlink" title="2. 选择排序"></a>2. 选择排序</h2><p><img src="/2023/07/21/java05day/select.gif"> </p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">从数组的第<span class="number">1</span>个位置,拿着这个值和后面的所有的数据进行比较,如果后面的值比这个位置的值要小.则交换.</span><br><span class="line">每次都可以确定剩余值的最小值 - 从小到大排 </span><br><span class="line">  </span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 选择排序</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> arr</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line"> <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">selectSort</span><span class="params">(<span class="type">int</span>[] arr)</span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(<span class="literal">null</span>==arr || arr.length==<span class="number">0</span>)</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> i+<span class="number">1</span>; j &lt; arr.length; j++) &#123;</span><br><span class="line">      <span class="keyword">if</span>(arr[i]&gt;arr[j])&#123;</span><br><span class="line">        arr[i] = arr[i]^arr[j];</span><br><span class="line">        arr[j] = arr[i]^arr[j];</span><br><span class="line">        arr[i] = arr[i]^arr[j];</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="3-直接插入排序"><a href="#3-直接插入排序" class="headerlink" title="3. 直接插入排序"></a>3. 直接插入排序</h2><p>简介:<em><strong>最简单的</strong></em></p>
+<p>将数组中剩余的值(从数组中第2个位置开始)依次直接插入到前面,<strong>保证前面的序列仍然是一个有序的序列</strong></p>
+<p>类似于<code>斗地主 - 摸牌</code></p>
+<p>{3,1,2,5,4,6}</p>
+<p>{<em><strong>3</strong></em>,1,2,5,4,6}</p>
+<p>{<em><strong>1,3</strong></em>,2,5,4,6}</p>
+<p>{<em><strong>1,2,3</strong></em>,5,4,6}</p>
+<p>…</p>
+<p><img src="/2023/07/21/java05day/insert.gif"> </p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//从小到大</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">sortDirectInsert</span><span class="params">(<span class="type">int</span>[] arr)</span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(<span class="literal">null</span>==arr || arr.length==<span class="number">0</span>)</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">  <span class="comment">//从第二个位置,下标为1</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">//桌子牌 3,1,2,5,4,6</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">    <span class="comment">//摸了一张牌3</span></span><br><span class="line">    <span class="comment">//arr[2] = 2</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//记录手中牌的顺序=&gt;  1 2 3</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> i; j &gt;<span class="number">0</span> ; j--) &#123;</span><br><span class="line">      <span class="keyword">if</span>(arr[j-<span class="number">1</span>]&gt;arr[j])&#123;</span><br><span class="line">        arr[j-<span class="number">1</span>] = arr[j-<span class="number">1</span>]^arr[j];</span><br><span class="line">        arr[j] = arr[j-<span class="number">1</span>]^arr[j];</span><br><span class="line">        arr[j-<span class="number">1</span>] = arr[j-<span class="number">1</span>]^arr[j];</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-快速排序"><a href="#4-快速排序" class="headerlink" title="4. 快速排序"></a>4. 快速排序</h2><p><img src="/2023/07/21/java05day/fast.gif"> </p>
+<p>算法思想:</p>
+<p><strong>分治思想</strong>:比大小,再分区</p>
+<ol>
+<li>从数组中取出一个数,作为<strong>基准数</strong></li>
+<li>分区:将比这个数大或者等于的数全部放在它的右边,小于它的数全部放在它的左边</li>
+<li>再对左右分区间重复第二步骤,直到各分区只有一个数</li>
+</ol>
+<p>实现思路:</p>
+<p><code>挖坑填数</code></p>
+<ol>
+<li><strong>将基准数挖出形成第一个坑</strong></li>
+<li><strong>由后向前找比它小的数,找到后挖出此数填到前一个坑中</strong></li>
+<li><strong>由前向后找比它大或等于的数,找到后也挖出此数填到前一个坑中</strong></li>
+<li><strong>再重复执行2,3两步骤.例如对5391672408</strong></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>元素</th>
+<th>5</th>
+<th>3</th>
+<th>9</th>
+<th>1</th>
+<th>6</th>
+<th>7</th>
+<th>2</th>
+<th>4</th>
+<th>0</th>
+<th>8</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>坑位</td>
+<td>坑0</td>
+<td></td>
+<td>坑2</td>
+<td></td>
+<td>坑4</td>
+<td>重合的位置</td>
+<td>坑5</td>
+<td>坑3</td>
+<td>坑1</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>0</td>
+<td>3</td>
+<td>4</td>
+<td>1</td>
+<td>2</td>
+<td>5基准数</td>
+<td>7</td>
+<td>6</td>
+<td>9</td>
+<td>8</td>
+</tr>
+<tr>
+<td>坑位</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>第一轮以数组中的第一个元素5为基准数 - 经过一轮循环走完 - 以5位置为基准,左边的都是比5小的值,右边的都是大于或者等于5的数字 - <strong>关键就是找到重合的位置!!!(分区 - 递归调用)</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 快速排序</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> arr</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> startIndex</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> endIndex</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">quickSort</span><span class="params">(<span class="type">int</span>[] arr,<span class="type">int</span> startIndex,<span class="type">int</span> endIndex)</span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(startIndex&lt;endIndex) &#123;</span><br><span class="line">    <span class="comment">//1. 找到重合的位置</span></span><br><span class="line">    <span class="comment">//分区 - 挖坑填数</span></span><br><span class="line">    <span class="type">int</span> <span class="variable">index</span> <span class="operator">=</span> getIndex(arr, startIndex, endIndex);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//2. 递归调用自己</span></span><br><span class="line">    <span class="comment">//index左边的</span></span><br><span class="line">    quickSort(arr, startIndex, index - <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//index右边的</span></span><br><span class="line">    quickSort(arr, index + <span class="number">1</span>, endIndex);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">getIndex</span><span class="params">(<span class="type">int</span>[] arr, <span class="type">int</span> startIndex, <span class="type">int</span> endIndex)</span> &#123;</span><br><span class="line">  <span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> startIndex;</span><br><span class="line">  <span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> endIndex;</span><br><span class="line">  <span class="comment">//1. 确定基准数</span></span><br><span class="line">  <span class="type">int</span> <span class="variable">x</span> <span class="operator">=</span> arr[i];</span><br><span class="line"></span><br><span class="line">  <span class="keyword">while</span>(i&lt;j)&#123;</span><br><span class="line">    <span class="comment">//由后向前找比它小的数,找到后挖出此数填到前一个坑中</span></span><br><span class="line">    <span class="keyword">while</span>(i&lt;j &amp;&amp; arr[j]&gt;=x)&#123;</span><br><span class="line">      j--;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//如果arr[j]&lt;x</span></span><br><span class="line">    <span class="keyword">if</span>(i&lt;j)&#123;</span><br><span class="line">      arr[i] = arr[j];</span><br><span class="line">      i++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//**由前向后找比它大或等于的数,找到后也挖出此数填到前一个坑中**</span></span><br><span class="line">    <span class="keyword">while</span>(i&lt;j &amp;&amp; arr[i]&lt;x)&#123;</span><br><span class="line">      i++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(i&lt;j)&#123;</span><br><span class="line">      <span class="comment">//arr[i]开始大于等于x</span></span><br><span class="line">      arr[j] = arr[i];</span><br><span class="line">      j--;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">//说明i开始j重合</span></span><br><span class="line">  arr[i] = x;<span class="comment">//把基准数放入到重合的位置</span></span><br><span class="line">  <span class="keyword">return</span> i;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>排序把人搞疯了</tag>
+      </tags>
   </entry>
   <entry>
     <title>mysql入门</title>

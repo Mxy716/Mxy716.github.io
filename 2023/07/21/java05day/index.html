@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Mu xingyu">
+    
+    <title>
+        
+            java05day |
+        
+        mxy716
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/logo.svg">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/font/css/fontawesome.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/font/css/regular.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/font/css/solid.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/font/css/brands.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"en","path":"search.xml"}
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true},"style":{"primary_color":"#0066cc","logo":"/images/logo.svg","favicon":"/images/logo.svg","avatar":"/images/avatar.svg","font_size":"18px","font_family":null,"hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"header_transparent":true,"background_img":"/images/bg.svg","description":"千里之行始于足下.","font_color":"rgb(0, 102, 204)","hitokoto":true},"scroll":{"progress_bar":true,"percent":true}},"local_search":{"enable":true,"preload":true},"code_copy":{},"code_block":{"tools":{"enable":true,"style":"mac"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":true},"lazyload":{"enable":false},"comment":{"enable":true,"use":"valine","valine":{"appid":"kr4ZAGhMIpUEtmIU8DQWOIYv-gzGzoHsz","appkey":"Bo6FYYL2JmaBdonYYnnGEre4","server_urls":null,"placeholder":"请提出你的问题"},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":true,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":true,"wordcount":true,"min2read":true},"img_align":"left","copyright_info":false},"version":"3.6.1"}
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
+    KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
+    KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original article title","author":"Original article author","link":"Original article link"}
+  </script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <i class="pjax-progress-icon fas fa-circle-notch fa-spin"></i>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/logo.svg">
+                </a>
+            
+            <a class="logo-title" href="/">
+               mxy716
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                关于
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">关于</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation">java05day</span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/avatar.svg">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">Mu xingyu</span>
+                            
+                                <span class="author-label">Lv2</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2023-07-21 17:18:26</span>
+        <span class="mobile">2023-07-21 17:18</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2023-07-21 17:19:15</span>
+    </span>
+    
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E6%8E%92%E5%BA%8F%E6%8A%8A%E4%BA%BA%E6%90%9E%E7%96%AF%E4%BA%86/">排序把人搞疯了</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>1.7k Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>7 Mins</span>
+        </span>
+    
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                
+
+                <h1 id="1-二维数组"><a href="#1-二维数组" class="headerlink" title="1. 二维数组"></a>1. 二维数组</h1><blockquote>
+<p>回忆定义一维数组</p>
+<p>元素类型[] 变量 &#x3D; new 元素类型[长度]</p>
+<p><code>元素类型 - 1. 决定了数组中可以存储的数据类型;2.元素类型可以是八种基本数据类型以及对象类型</code></p>
+<p><code>数组本身就是一个对象类型 - int[]</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">比如<span class="type">int</span>[][] arr = <span class="keyword">new</span> <span class="title class_">int</span>[rows][cols];</span><br><span class="line">或者<span class="type">int</span> arr[][] = <span class="keyword">new</span> <span class="title class_">int</span>[rows][cols];</span><br></pre></td></tr></table></figure>
+
+<p><code>二维数组中的每个元素都是一维数组</code></p>
+</blockquote>
+<h2 id="2-赋值方式"><a href="#2-赋值方式" class="headerlink" title="2. 赋值方式"></a>2. 赋值方式</h2><blockquote>
+<ol>
+<li><p>可以通过下标一一赋值</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr[<span class="number">0</span>][<span class="number">0</span>] = <span class="number">10</span>;</span><br></pre></td></tr></table></figure></li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="2">
+<li><p>定义数组的同时进行赋值</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span>[][] arr = <span class="keyword">new</span> <span class="title class_">int</span>[][]&#123;&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;,&#123;<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>&#125;,&#123;<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>&#125;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span>[][] arr1 = &#123;&#123;<span class="number">1</span>,<span class="number">2</span>&#125;,&#123;<span class="number">3</span>,<span class="number">4</span>&#125;,&#123;<span class="number">5</span>,<span class="number">6</span>&#125;&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>先定义数组,然后一行一行进行赋值</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span>[][] arr = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">2</span>][<span class="number">3</span>];</span><br><span class="line"></span><br><span class="line">arr[<span class="number">0</span>] = <span class="keyword">new</span> <span class="title class_">int</span>[]&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;;</span><br><span class="line">arr[<span class="number">1</span>] = <span class="keyword">new</span> <span class="title class_">int</span>[]&#123;<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//但是不能这样写</span></span><br><span class="line"><span class="comment">//arr[0]=&#123;5,6,7&#125;;//编译是错误的</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>定义一个不规则的二维数组,定义二维数组的时候,列是可以省略不写的</p>
+<p><code>但是使用之前需要先初始化</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span>[][] arr = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">3</span>][];</span><br><span class="line">arr[<span class="number">0</span>] = <span class="keyword">new</span> <span class="title class_">int</span>[]&#123;<span class="number">1</span>&#125;;</span><br><span class="line">arr[<span class="number">1</span>] = <span class="keyword">new</span> <span class="title class_">int</span>[]&#123;<span class="number">1</span>,<span class="number">1</span>&#125;;</span><br><span class="line">arr[<span class="number">2</span>] = <span class="keyword">new</span> <span class="title class_">int</span>[]&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">1</span>&#125;;</span><br><span class="line">      </span><br><span class="line">或者</span><br><span class="line"><span class="type">int</span>[][] arr5 = &#123;&#123;<span class="number">100</span>&#125;,&#123;<span class="number">100</span>,<span class="number">200</span>&#125;,&#123;<span class="number">100</span>,<span class="number">300</span>&#125;&#125;;</span><br></pre></td></tr></table></figure></li>
+</ol>
+</blockquote>
+<h2 id="3-遍历方式"><a href="#3-遍历方式" class="headerlink" title="3. 遍历方式"></a>3. 遍历方式</h2><blockquote>
+<ol start="0">
+<li>通过下标一一输出</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol>
+<li><p>遍历方式一</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span>[][] arr = <span class="keyword">new</span> <span class="title class_">int</span>[][]&#123;&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;,&#123;<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>&#125;,&#123;<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>&#125;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>;i&lt;arr.length;i++)&#123;</span><br><span class="line">  System.out.println(Arrays.toString(arr[i]));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>双层for循环遍历</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>;i&lt;arr.length;i++)&#123;</span><br><span class="line">  <span class="comment">//int[] temp = arr[i];</span></span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">0</span>;j&lt;arr[i].length;j++)&#123;</span><br><span class="line">    System.out.print(arr[i][j]+<span class="string">&quot;\t&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  System.out.println();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>双层增强for循环</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="type">int</span>[] e:arr)&#123;</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> t:e)&#123;</span><br><span class="line">     System.out.print(t+<span class="string">&quot;\t&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  System.out.println();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="4">
+<li>数组工具类java.util.Arrays提供的static String deepToString(数组对象);</li>
+</ol>
+</blockquote>
+<h1 id="2-数组的拷贝"><a href="#2-数组的拷贝" class="headerlink" title="2. 数组的拷贝"></a>2. 数组的拷贝</h1><blockquote>
+<p>数组中内存中一块连续的空间-并且<code>数组的大小(长度)一旦确定了 - 内存中是绝对不允许修改的</code></p>
+<p><code>业务中实现数组的 - 只要涉及到影响到数组的大小 - 增加/删除/去重 - 不存在这些操作的</code></p>
+</blockquote>
+<hr>
+<blockquote>
+<ol>
+<li><p>java.util.Arrays</p>
+<p>static int[] copyOf(int[] original,int newLength);&#x2F;&#x2F;适合在末尾添加数据</p>
+<table>
+<thead>
+<tr>
+<th><code>static int[]</code></th>
+<th><code>copyOf(int[] original, int newLength)</code>复制指定的数组，用零截取或填充（如有必要），以便复制具有指定的长度。</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td>original - 原来的数组,newLength&#x3D;&gt;新数组长度</td>
+</tr>
+</tbody></table>
+</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="2">
+<li><p>java.lang.System</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">System.arraycopy(original, <span class="number">0</span>, copy, <span class="number">0</span>,Math.min(original.length, newLength));</span><br><span class="line"><span class="number">1.</span> origginal - 原数组</span><br><span class="line"><span class="number">2.</span> <span class="number">0</span> - 从原数组的哪个下标开始拷贝</span><br><span class="line"><span class="number">3.</span> copy - 目标数组</span><br><span class="line"><span class="number">4.</span> <span class="number">0</span> - 拷贝到目标数组的哪个位置(下标处)</span><br><span class="line"><span class="number">5.</span> 最后一个长度 - 拷贝的个数</span><br></pre></td></tr></table></figure></li>
+</ol>
+</blockquote>
+<h1 id="N-数组排序"><a href="#N-数组排序" class="headerlink" title="N. 数组排序"></a>N. 数组排序</h1><h2 id="1-冒泡排序"><a href="#1-冒泡排序" class="headerlink" title="1. 冒泡排序"></a>1. 冒泡排序</h2><p><strong>相邻的</strong>俩个进行<strong>俩俩</strong>比较.每一轮比较完 - 确定一个最值</p>
+<p><img src="/2023/07/21/java05day/bubble.gif"> </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">猴子🐒玉米 =&gt; 摘一个玉米,和手上的进行比较.保留最小的.</span><br><span class="line">每次循环也是确定一个最值</span><br><span class="line">  </span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 冒泡排序 - 从小到大</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> arr</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">bubbleSort</span><span class="params">(<span class="type">int</span>[] arr)</span>&#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">0</span>; j &lt; arr.length-<span class="number">1</span>-i; j++) &#123;</span><br><span class="line">      <span class="keyword">if</span>(arr[j]&gt;arr[j+<span class="number">1</span>])&#123;</span><br><span class="line">        arr[j] = arr[j]^arr[j+<span class="number">1</span>];</span><br><span class="line">        arr[j+<span class="number">1</span>] = arr[j]^arr[j+<span class="number">1</span>];</span><br><span class="line">        arr[j] = arr[j]^arr[j+<span class="number">1</span>];</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-选择排序"><a href="#2-选择排序" class="headerlink" title="2. 选择排序"></a>2. 选择排序</h2><p><img src="/2023/07/21/java05day/select.gif"> </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">从数组的第<span class="number">1</span>个位置,拿着这个值和后面的所有的数据进行比较,如果后面的值比这个位置的值要小.则交换.</span><br><span class="line">每次都可以确定剩余值的最小值 - 从小到大排 </span><br><span class="line">  </span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 选择排序</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> arr</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line"> <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">selectSort</span><span class="params">(<span class="type">int</span>[] arr)</span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(<span class="literal">null</span>==arr || arr.length==<span class="number">0</span>)</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> i+<span class="number">1</span>; j &lt; arr.length; j++) &#123;</span><br><span class="line">      <span class="keyword">if</span>(arr[i]&gt;arr[j])&#123;</span><br><span class="line">        arr[i] = arr[i]^arr[j];</span><br><span class="line">        arr[j] = arr[i]^arr[j];</span><br><span class="line">        arr[i] = arr[i]^arr[j];</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="3-直接插入排序"><a href="#3-直接插入排序" class="headerlink" title="3. 直接插入排序"></a>3. 直接插入排序</h2><p>简介:<em><strong>最简单的</strong></em></p>
+<p>将数组中剩余的值(从数组中第2个位置开始)依次直接插入到前面,<strong>保证前面的序列仍然是一个有序的序列</strong></p>
+<p>类似于<code>斗地主 - 摸牌</code></p>
+<p>{3,1,2,5,4,6}</p>
+<p>{<em><strong>3</strong></em>,1,2,5,4,6}</p>
+<p>{<em><strong>1,3</strong></em>,2,5,4,6}</p>
+<p>{<em><strong>1,2,3</strong></em>,5,4,6}</p>
+<p>…</p>
+<p><img src="/2023/07/21/java05day/insert.gif"> </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//从小到大</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">sortDirectInsert</span><span class="params">(<span class="type">int</span>[] arr)</span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(<span class="literal">null</span>==arr || arr.length==<span class="number">0</span>)</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">  <span class="comment">//从第二个位置,下标为1</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">//桌子牌 3,1,2,5,4,6</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">    <span class="comment">//摸了一张牌3</span></span><br><span class="line">    <span class="comment">//arr[2] = 2</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//记录手中牌的顺序=&gt;  1 2 3</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> i; j &gt;<span class="number">0</span> ; j--) &#123;</span><br><span class="line">      <span class="keyword">if</span>(arr[j-<span class="number">1</span>]&gt;arr[j])&#123;</span><br><span class="line">        arr[j-<span class="number">1</span>] = arr[j-<span class="number">1</span>]^arr[j];</span><br><span class="line">        arr[j] = arr[j-<span class="number">1</span>]^arr[j];</span><br><span class="line">        arr[j-<span class="number">1</span>] = arr[j-<span class="number">1</span>]^arr[j];</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-快速排序"><a href="#4-快速排序" class="headerlink" title="4. 快速排序"></a>4. 快速排序</h2><p><img src="/2023/07/21/java05day/fast.gif"> </p>
+<p>算法思想:</p>
+<p><strong>分治思想</strong>:比大小,再分区</p>
+<ol>
+<li>从数组中取出一个数,作为<strong>基准数</strong></li>
+<li>分区:将比这个数大或者等于的数全部放在它的右边,小于它的数全部放在它的左边</li>
+<li>再对左右分区间重复第二步骤,直到各分区只有一个数</li>
+</ol>
+<p>实现思路:</p>
+<p><code>挖坑填数</code></p>
+<ol>
+<li><strong>将基准数挖出形成第一个坑</strong></li>
+<li><strong>由后向前找比它小的数,找到后挖出此数填到前一个坑中</strong></li>
+<li><strong>由前向后找比它大或等于的数,找到后也挖出此数填到前一个坑中</strong></li>
+<li><strong>再重复执行2,3两步骤.例如对5391672408</strong></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>元素</th>
+<th>5</th>
+<th>3</th>
+<th>9</th>
+<th>1</th>
+<th>6</th>
+<th>7</th>
+<th>2</th>
+<th>4</th>
+<th>0</th>
+<th>8</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>坑位</td>
+<td>坑0</td>
+<td></td>
+<td>坑2</td>
+<td></td>
+<td>坑4</td>
+<td>重合的位置</td>
+<td>坑5</td>
+<td>坑3</td>
+<td>坑1</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>0</td>
+<td>3</td>
+<td>4</td>
+<td>1</td>
+<td>2</td>
+<td>5基准数</td>
+<td>7</td>
+<td>6</td>
+<td>9</td>
+<td>8</td>
+</tr>
+<tr>
+<td>坑位</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>第一轮以数组中的第一个元素5为基准数 - 经过一轮循环走完 - 以5位置为基准,左边的都是比5小的值,右边的都是大于或者等于5的数字 - <strong>关键就是找到重合的位置!!!(分区 - 递归调用)</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 快速排序</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> arr</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> startIndex</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> endIndex</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">quickSort</span><span class="params">(<span class="type">int</span>[] arr,<span class="type">int</span> startIndex,<span class="type">int</span> endIndex)</span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(startIndex&lt;endIndex) &#123;</span><br><span class="line">    <span class="comment">//1. 找到重合的位置</span></span><br><span class="line">    <span class="comment">//分区 - 挖坑填数</span></span><br><span class="line">    <span class="type">int</span> <span class="variable">index</span> <span class="operator">=</span> getIndex(arr, startIndex, endIndex);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//2. 递归调用自己</span></span><br><span class="line">    <span class="comment">//index左边的</span></span><br><span class="line">    quickSort(arr, startIndex, index - <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//index右边的</span></span><br><span class="line">    quickSort(arr, index + <span class="number">1</span>, endIndex);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">getIndex</span><span class="params">(<span class="type">int</span>[] arr, <span class="type">int</span> startIndex, <span class="type">int</span> endIndex)</span> &#123;</span><br><span class="line">  <span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> startIndex;</span><br><span class="line">  <span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> endIndex;</span><br><span class="line">  <span class="comment">//1. 确定基准数</span></span><br><span class="line">  <span class="type">int</span> <span class="variable">x</span> <span class="operator">=</span> arr[i];</span><br><span class="line"></span><br><span class="line">  <span class="keyword">while</span>(i&lt;j)&#123;</span><br><span class="line">    <span class="comment">//由后向前找比它小的数,找到后挖出此数填到前一个坑中</span></span><br><span class="line">    <span class="keyword">while</span>(i&lt;j &amp;&amp; arr[j]&gt;=x)&#123;</span><br><span class="line">      j--;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//如果arr[j]&lt;x</span></span><br><span class="line">    <span class="keyword">if</span>(i&lt;j)&#123;</span><br><span class="line">      arr[i] = arr[j];</span><br><span class="line">      i++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//**由前向后找比它大或等于的数,找到后也挖出此数填到前一个坑中**</span></span><br><span class="line">    <span class="keyword">while</span>(i&lt;j &amp;&amp; arr[i]&lt;x)&#123;</span><br><span class="line">      i++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(i&lt;j)&#123;</span><br><span class="line">      <span class="comment">//arr[i]开始大于等于x</span></span><br><span class="line">      arr[j] = arr[i];</span><br><span class="line">      j--;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">//说明i开始j重合</span></span><br><span class="line">  arr[i] = x;<span class="comment">//把基准数放入到重合的位置</span></span><br><span class="line">  <span class="keyword">return</span> i;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            </div>
+
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E6%8E%92%E5%BA%8F%E6%8A%8A%E4%BA%BA%E6%90%9E%E7%96%AF%E4%BA%86/">#排序把人搞疯了</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/2023/07/21/java04day/"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">java04day</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+                <div class="comment-container">
+                    
+<div class="comments-container">
+    <div id="comments-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fas fa-comments"></i>&nbsp;Comments
+    </div>
+    
+        
+            
+
+    <div class="valine-container">
+        <script data-pjax src="//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script>
+        <div id="vcomments"></div>
+        <script data-pjax>
+          function loadValine() {
+
+            const config = {
+              el: '#vcomments',
+              appId: 'kr4ZAGhMIpUEtmIU8DQWOIYv-gzGzoHsz',
+              appKey: 'Bo6FYYL2JmaBdonYYnnGEre4',
+              meta: ['nick', 'mail', 'link'],
+              avatar: 'wavatar',
+              enableQQ: true,
+              placeholder: '请提出你的问题',
+              lang: 'en'.toLowerCase()
+            }
+
+            if ('') {
+              config.serverURLs = ''
+            }
+
+            new Valine(config)
+
+            function getAuthor(language) {
+              switch (language) {
+                case 'en':
+                  return 'Author'
+                case 'zh-CN':
+                  return '博主'
+                default:
+                  return 'Master'
+              }
+            }
+
+            // Add "Author" identify
+            const getValineDomTimer = setInterval(() => {
+              const vcards = document.querySelectorAll('#vcomments .vcards .vcard')
+              if (vcards.length > 0) {
+                let author = 'Mu xingyu'
+
+                if (author) {
+                  for (let vcard of vcards) {
+                    const vnick_dom = vcard.querySelector('.vhead .vnick')
+                    const vnick = vnick_dom.innerHTML
+                    if (vnick === author) {
+                      vnick_dom.innerHTML = `${vnick} <span class="author">${getAuthor(KEEP.hexo_config.language)}</span>`
+                    }
+                  }
+                }
+                clearInterval(getValineDomTimer)
+              } else {
+                clearInterval(getValineDomTimer)
+              }
+            }, 2000)
+          }
+
+          if ('true' === 'true') {
+            const loadValineTimeout = setTimeout(() => {
+              loadValine()
+              clearTimeout(loadValineTimeout)
+            }, 1000)
+          } else {
+            window.addEventListener('DOMContentLoaded', loadValine)
+          }
+        </script>
+    </div>
+
+
+
+        
+    
+</div>
+
+                </div>
+            
+        </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84"><span class="nav-number">1.</span> <span class="nav-text">1. 二维数组</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E8%B5%8B%E5%80%BC%E6%96%B9%E5%BC%8F"><span class="nav-number">1.1.</span> <span class="nav-text">2. 赋值方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E9%81%8D%E5%8E%86%E6%96%B9%E5%BC%8F"><span class="nav-number">1.2.</span> <span class="nav-text">3. 遍历方式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E6%95%B0%E7%BB%84%E7%9A%84%E6%8B%B7%E8%B4%9D"><span class="nav-number">2.</span> <span class="nav-text">2. 数组的拷贝</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#N-%E6%95%B0%E7%BB%84%E6%8E%92%E5%BA%8F"><span class="nav-number">3.</span> <span class="nav-text">N. 数组排序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F"><span class="nav-number">3.1.</span> <span class="nav-text">1. 冒泡排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F"><span class="nav-number">3.2.</span> <span class="nav-text">2. 选择排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E7%9B%B4%E6%8E%A5%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F"><span class="nav-number">3.3.</span> <span class="nav-text">3. 直接插入排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F"><span class="nav-number">3.4.</span> <span class="nav-text">4. 快速排序</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2023</span> -
+            
+            2023
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">Mu xingyu</a>
+            
+        </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="tools-item flex-center go-to-comments">
+                <i class="fas fa-comment"></i>
+                <span class="post-comments-count"></span>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/dark-light-toggle.js"></script>
+
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/local-search.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/code-block.js"></script>
+
+
+
+
+<div class="post-scripts pjax">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/post-helper.js"></script>
+        
+            <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/libs/anime.min.js"></script>
+        
+        
+            <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/toc.js"></script>
+        
+    
+</div>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Mu xingyu">
+    
+    <title>
+        
+            java03day |
+        
+        mxy716
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/logo.svg">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/font/css/fontawesome.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/font/css/regular.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/font/css/solid.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/font/css/brands.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"en","path":"search.xml"}
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true},"style":{"primary_color":"#0066cc","logo":"/images/logo.svg","favicon":"/images/logo.svg","avatar":"/images/avatar.svg","font_size":"18px","font_family":null,"hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"header_transparent":true,"background_img":"/images/bg.svg","description":"千里之行始于足下.","font_color":"rgb(0, 102, 204)","hitokoto":true},"scroll":{"progress_bar":true,"percent":true}},"local_search":{"enable":true,"preload":true},"code_copy":{},"code_block":{"tools":{"enable":true,"style":"mac"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":true},"lazyload":{"enable":false},"comment":{"enable":true,"use":"valine","valine":{"appid":"kr4ZAGhMIpUEtmIU8DQWOIYv-gzGzoHsz","appkey":"Bo6FYYL2JmaBdonYYnnGEre4","server_urls":null,"placeholder":"请提出你的问题"},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":true,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":true,"wordcount":true,"min2read":true},"img_align":"left","copyright_info":false},"version":"3.6.1"}
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
+    KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
+    KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original article title","author":"Original article author","link":"Original article link"}
+  </script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <i class="pjax-progress-icon fas fa-circle-notch fa-spin"></i>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/logo.svg">
+                </a>
+            
+            <a class="logo-title" href="/">
+               mxy716
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                关于
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">关于</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation">java03day</span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/avatar.svg">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">Mu xingyu</span>
+                            
+                                <span class="author-label">Lv2</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2023-07-21 17:15:35</span>
+        <span class="mobile">2023-07-21 17:15</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2023-07-21 17:17:23</span>
+    </span>
+    
+    
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>2k Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>7 Mins</span>
+        </span>
+    
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                
+
+                <h1 id="1-方法的定义和使用"><a href="#1-方法的定义和使用" class="headerlink" title="1. 方法的定义和使用"></a>1. 方法的定义和使用</h1><blockquote>
+<p>方法的定义: 用来完成一段特定代码的片段.  简单理解:就是写了一段逻辑代码,然后把这段代码放入到了方法中了.</p>
+<p>因为这个方法是可以被其他地方调用的,并且调用者是无需关心这个方法内部的细节的 - 仅仅关心在这个方法的功能本身.</p>
+<p>也是为了提高后期程序的可维护性.</p>
+</blockquote>
+<h2 id="1-定义方法的语法"><a href="#1-定义方法的语法" class="headerlink" title="1. 定义方法的语法"></a>1. 定义方法的语法</h2><blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">定义方法的最全的语法:</span><br><span class="line">修饰符 返回类型 方法名称([参数列表]) [<span class="keyword">throws</span> 异常列表]&#123;</span><br><span class="line">方法体...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">现阶段只需要</span><br><span class="line">修饰符 返回类型 方法名称([参数列表])&#123;</span><br><span class="line">方法体...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h2 id="2-语法解析"><a href="#2-语法解析" class="headerlink" title="2. 语法解析"></a>2. 语法解析</h2><blockquote>
+<p>死记住 -</p>
+<ol>
+<li><p>方法体中绝对不允许定义方法.</p>
+</li>
+<li><p>main方法仍然是程序的主入口 - 必不可少.  因此需要在main方法在中调用自定义的方法.</p>
+</li>
+</ol>
+</blockquote>
+<ol>
+<li><p>修饰符</p>
+<ul>
+<li>访问修饰符 - <strong>public(公共的) private(私有的)</strong> protected(受保护的) 默认的</li>
+<li>其他修饰符 - **static,**final,abstract</li>
+</ul>
+<p>修饰符之间是没有顺序的</p>
+</li>
+<li><p>关于方法的返回类型有两大类</p>
+<ol>
+<li><p>无返回类型 - void</p>
+<p>也是可以存在return语句</p>
+</li>
+<li><p>有返回类型 - 可以是八种基本数据类型或者对象类型[包括自定义对象类型] - String字符串</p>
+<p>方法体中一定含有<strong>return + 返回值的语句;</strong></p>
+</li>
+</ol>
+</li>
+<li><p>方法名 - 命名的规范 - 请你参考变量名 - 小驼峰.</p>
+</li>
+<li><p>参数列表</p>
+<ol>
+<li>无参</li>
+<li>固定长参数</li>
+<li>可变长参数</li>
+</ol>
+</li>
+</ol>
+<h2 id="3-关于static关键字"><a href="#3-关于static关键字" class="headerlink" title="3. 关于static关键字"></a>3. 关于static关键字</h2><p>有static修饰的方法 - 静态方法</p>
+<p>没有static修饰的方法 - 非静态方法 - 普通方法</p>
+<p>静态方法和非静态方法调用的方式是不一样的</p>
+<p><em><strong>通用的规则:</strong></em></p>
+<ol>
+<li><p>非静态方法 - ①创建方法所在类的对象,②通过对象进行调用.</p>
+<p>非静态方法属于对象</p>
+</li>
+<li><p>静态方法 - 允许直接使用类名.静态方法调用的</p>
+<p>静态方法属于类</p>
+</li>
+</ol>
+<p>总结: 属于谁,就由谁去调用!</p>
+<hr>
+<p><code>基于一定的原理之后可以使用的规则</code> - <em><strong>前提方法的定义和方法的调用在同一个类中.</strong></em></p>
+<ol>
+<li>非静态方法中是允许直接调用静态方法或者非静态方法.</li>
+<li>静态方法中是可以直接调用静态方法,但是不允许直接调用非静态方法.</li>
+</ol>
+<hr>
+<h2 id="4-导包操作"><a href="#4-导包操作" class="headerlink" title="4. 导包操作"></a>4. 导包操作</h2><blockquote>
+<p>类的全限定名 - 类的全称 - 包名.类名</p>
+<p>一个包下的某个类调用另外一个包下的某个类中的方法的时候,必须先导包.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tech.aistar.day02.method.MethodHelloDemo;</span><br><span class="line"></span><br><span class="line">不建议使用的 - 把method包下的所有的类都导入了 - 影响到性能.</span><br><span class="line"><span class="keyword">import</span> tech.aistar.day02.method.*;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<hr>
+<ol>
+<li>java.lang - java基础包 - 使用到该包下的所有的类,都是无需导包的.默认去到该包下搜索的.</li>
+<li>java.util</li>
+<li>java.sql</li>
+<li>java.text</li>
+<li>java.io</li>
+</ol>
+<hr>
+<h2 id="5-私有方法的应用场景"><a href="#5-私有方法的应用场景" class="headerlink" title="5. 私有方法的应用场景"></a>5. 私有方法的应用场景</h2><blockquote>
+<ol>
+<li><p>简化api - 方便程序的,减少对程序员的干扰</p>
+</li>
+<li><p>场景</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">NB-Util类 - NB的方法 - 非常复杂的</span><br><span class="line">     </span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">nb01</span><span class="params">()</span>&#123;</span><br><span class="line">  <span class="comment">//非常复杂的业务逻辑 - coding</span></span><br><span class="line">  <span class="comment">//common...公开的重复的代码</span></span><br><span class="line">  commonNb();</span><br><span class="line">&#125;</span><br><span class="line">   </span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">nb02</span><span class="params">()</span>&#123;</span><br><span class="line">  <span class="comment">//非常复杂的业务逻辑 - coding</span></span><br><span class="line">  <span class="comment">//common - 公开的重复的代码</span></span><br><span class="line">  commonNb();</span><br><span class="line">&#125;</span><br><span class="line">   </span><br><span class="line"><span class="comment">//commonNb单独拿出用的话 - 到底有没有用.</span></span><br><span class="line"><span class="comment">//如果单独被调用,不会产生什么业务功能的话</span></span><br><span class="line">   </span><br><span class="line"><span class="comment">//&quot;小螺丝的代码,不需要对外公开的代码 - 有必要定义成私有的&quot;</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">commonNb</span><span class="params">()</span>&#123;</span><br><span class="line">     </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+</blockquote>
+<hr>
+<h1 id="2-递归算法"><a href="#2-递归算法" class="headerlink" title="2. 递归算法"></a>2. 递归算法</h1><blockquote>
+<p>使用解决大量的需要重复计算的业务.<code>和循环算法比较起来的话 - 递归算法性能是比较低下,需要保存中间的临时的值</code></p>
+</blockquote>
+<blockquote>
+<ol>
+<li>递 - 将一个问题,分解成若干个子问题.并且发现这些子问题的解决过程是重复的&#x2F;一样的.</li>
+<li>归 - 一定要指定一个递归的出口 - 临界值 - 不符合”递”的条件.</li>
+</ol>
+</blockquote>
+<hr>
+<p>递归的步骤</p>
+<ol>
+<li>指定递归出口,如果没有指定递归出口,抛出java.lang.StackOverflowError</li>
+<li>方法体中调用自己.</li>
+</ol>
+<hr>
+<p>练习:</p>
+<ol>
+<li><p><strong>求<em>斐波那契</em>数列</strong></p>
+<p><strong>1 1 2 3 5 8 13 21 34 55 …</strong></p>
+</li>
+<li><p><strong>求阶乘</strong></p>
+</li>
+</ol>
+<hr>
+<ol>
+<li><p>求出俩个数的最大公约数 - 辗除法</p>
+</li>
+<li><p>求杨辉三角坐标的数值</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">1</span> <span class="number">1</span></span><br><span class="line"><span class="number">1</span> <span class="number">2</span> <span class="number">1</span></span><br><span class="line"><span class="number">1</span> <span class="number">3</span> <span class="number">3</span> <span class="number">1</span></span><br><span class="line"><span class="number">1</span> <span class="number">4</span> <span class="number">6</span> <span class="number">4</span> <span class="number">1</span></span><br><span class="line"><span class="number">1</span> <span class="number">5</span> <span class="number">10</span> <span class="number">10</span> <span class="number">5</span> <span class="number">1</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>自闭题 - 给定一个数字,依次按照顺序输出这个数字每位上的数字</p>
+<p>比如1234, 直接输出1 2 3 4 &#x3D;&gt; &#x2F; %</p>
+<p>1234&#x2F;10 &#x3D; 123 &#x2F; 10 &#x3D; 12 &#x2F; 10 &#x3D; 1 % 10 &#x3D; 1</p>
+<p>5 &#x3D;&gt; 5%10&#x3D;5</p>
+<hr>
+</li>
+</ol>
+<h1 id="3-方法的重载"><a href="#3-方法的重载" class="headerlink" title="3. 方法的重载"></a>3. 方法的重载</h1><blockquote>
+<p>简化api - 方便调用</p>
+<p>overload</p>
+<p>发生的条件</p>
+<ol>
+<li><p>重载的方法是在同一个类中.</p>
+</li>
+<li><p>重载的方法的名称是相同的</p>
+</li>
+<li><p>重载的方法的参数列表一定不同</p>
+<p>3-1. 个数一样,类型不一样</p>
+<p>3-2. 个数不一样</p>
+</li>
+<li><p>重载的方法返回类型可以一样&#x2F;不一样</p>
+</li>
+</ol>
+</blockquote>
+<hr>
+<h1 id="4-java-lang-Math-C"><a href="#4-java-lang-Math-C" class="headerlink" title="4. java.lang.Math[C]"></a>4. java.lang.Math[C]</h1><blockquote>
+<p>学习如何使用api学习手册 - 如何使用jdk中内置的类中的有用的方法.</p>
+</blockquote>
+<blockquote>
+<p><code>Math</code>类包含执行基本数字运算的方法，如基本指数，对数，平方根和三角函数。</p>
+</blockquote>
+<blockquote>
+<p>发现方法都是采用static修饰的,直接使用类名来调用.</p>
+</blockquote>
+<blockquote>
+<p>常见的方法:max,min,abs,pow,sqrt,random</p>
+<p>笔试:floor和round</p>
+</blockquote>
+<h1 id="5-条件分支语句"><a href="#5-条件分支语句" class="headerlink" title="5. 条件分支语句"></a>5. 条件分支语句</h1><ol>
+<li>if-else语句 - 比较灵活.<ul>
+<li>if语句可以单独使用.如果if块中只有一行代码,那么{}省略不写的.</li>
+<li>if括号中只能是boolean值或者条件表达式,为true,则进入{}中执行</li>
+<li>if和else , true&#x3D;&gt;if块,false&#x3D;&gt;else块,else块中如果只有一行代码,同样{}可以省略不写的.</li>
+<li>if-else if - else if - else - 注意条件之间要互斥.</li>
+<li>if或者else都是允许嵌套使用的.</li>
+</ul>
+</li>
+<li>switch-case语句</li>
+<li>三元操作符 - 三目运算符</li>
+</ol>
+<hr>
+<h1 id="6-循环语句"><a href="#6-循环语句" class="headerlink" title="6. 循环语句"></a>6. 循环语句</h1><h2 id="1-for循环"><a href="#1-for循环" class="headerlink" title="1. for循环"></a>1. for循环</h2><p>for循环分类 - <em><strong>单层for循环</strong></em>以及<em><strong>嵌套for循环</strong></em>,但是不推荐超过3层for,嵌套越多,性能越低.</p>
+<ol>
+<li><p>单层for循环语法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>循环的复合形态 - 不推荐使用 - 可读性比较差</span><br><span class="line"><span class="keyword">for</span>(同时初始化俩个变量;表达式②;表达式③)&#123;</span><br><span class="line">  <span class="comment">//循环体...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(表达式①;表达式②;表达式③)&#123;</span><br><span class="line">  <span class="comment">//循环体</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">表达式① - 变量因子的初始化,比如<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">          只会走一次</span><br><span class="line">            </span><br><span class="line">表达式② - 循环退出的条件,比如i&lt;<span class="number">3</span>;</span><br><span class="line">          表达式②返回<span class="literal">true</span>,才会进入到循环体中去执行.否则,直接退出循环.</span><br><span class="line">          至少走一次</span><br><span class="line">            </span><br><span class="line">          循环体走完,走表达式③</span><br><span class="line">            </span><br><span class="line">表达式③ - 变量因子每次循环的变化; 比如,i++</span><br><span class="line">          可能执行,可能不执行.</span><br></pre></td></tr></table></figure>
+
+<p><code>表达式省略的场景,常见的俩种</code></p>
+<ol>
+<li>表达式③省略了</li>
+<li>三个表达式都省略了 - 死循环 - 循环体中必然会出现打破循环的语句.</li>
+</ol>
+</li>
+<li><p>嵌套for循环</p>
+</li>
+</ol>
+   <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//外层for循环</span></span><br><span class="line"><span class="keyword">for</span>(表达式①;表达式②;表达式③)&#123;</span><br><span class="line">  <span class="comment">//内层for循环 - 作为外部循环的循环体</span></span><br><span class="line">  <span class="keyword">for</span>(表达式③;表达式④;表达式⑤)&#123;</span><br><span class="line">  	<span class="comment">//循环体</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">外部循环执行一次,内层循环执行全部.</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="作业"><a href="#作业" class="headerlink" title="作业"></a>作业</h1><blockquote>
+<ol>
+<li><p>打印图形.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">*</span><br><span class="line">     * *</span><br><span class="line">    *   *</span><br><span class="line">   *     *</span><br><span class="line">  *       *</span><br><span class="line">   *     *</span><br><span class="line">    *   *</span><br><span class="line">     * * </span><br><span class="line">      *   </span><br></pre></td></tr></table></figure>
+</li>
+<li><p>阶乘和斐波那契数列 - for循环实现一遍</p>
+</li>
+<li><p>打印所有这样的组合,这个组合是三位数.  数字是由1,2,3,4当中的三个组成.</p>
+<p>但是不能出现重复的数据.  比如合法的1,2,3   总共:24个</p>
+<p><code>增加难度:没打印6个换一行!</code></p>
+</li>
+<li><p>关于阶乘的题目</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">定义一个方法,传入一个参数,比如传入的是<span class="number">6.</span></span><br><span class="line">程序最终输出的结果,必须是下面的:</span><br><span class="line"><span class="number">1</span>!=<span class="number">1</span></span><br><span class="line"><span class="number">2</span>!=<span class="number">2</span></span><br><span class="line"><span class="number">3</span>!=<span class="number">6</span></span><br><span class="line"><span class="number">4</span>!=<span class="number">24</span></span><br><span class="line"><span class="number">5</span>!=<span class="number">120</span></span><br><span class="line"><span class="number">6</span>!=<span class="number">720</span></span><br><span class="line">  </span><br><span class="line"><span class="number">1</span>! + <span class="number">2</span>! + <span class="number">3</span>! + <span class="number">4</span>! + <span class="number">5</span>! + <span class="number">6</span>!=<span class="number">873</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+</blockquote>
+<hr>
+
+            </div>
+
+            
+
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                               rel="prev"
+                               href="/2023/07/21/java04day/"
+                            >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                                <span class="title flex-center">
+                                <span class="post-nav-title-item">java04day</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/2023/07/18/java02day/"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">java02day</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+                <div class="comment-container">
+                    
+<div class="comments-container">
+    <div id="comments-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fas fa-comments"></i>&nbsp;Comments
+    </div>
+    
+        
+            
+
+    <div class="valine-container">
+        <script data-pjax src="//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script>
+        <div id="vcomments"></div>
+        <script data-pjax>
+          function loadValine() {
+
+            const config = {
+              el: '#vcomments',
+              appId: 'kr4ZAGhMIpUEtmIU8DQWOIYv-gzGzoHsz',
+              appKey: 'Bo6FYYL2JmaBdonYYnnGEre4',
+              meta: ['nick', 'mail', 'link'],
+              avatar: 'wavatar',
+              enableQQ: true,
+              placeholder: '请提出你的问题',
+              lang: 'en'.toLowerCase()
+            }
+
+            if ('') {
+              config.serverURLs = ''
+            }
+
+            new Valine(config)
+
+            function getAuthor(language) {
+              switch (language) {
+                case 'en':
+                  return 'Author'
+                case 'zh-CN':
+                  return '博主'
+                default:
+                  return 'Master'
+              }
+            }
+
+            // Add "Author" identify
+            const getValineDomTimer = setInterval(() => {
+              const vcards = document.querySelectorAll('#vcomments .vcards .vcard')
+              if (vcards.length > 0) {
+                let author = 'Mu xingyu'
+
+                if (author) {
+                  for (let vcard of vcards) {
+                    const vnick_dom = vcard.querySelector('.vhead .vnick')
+                    const vnick = vnick_dom.innerHTML
+                    if (vnick === author) {
+                      vnick_dom.innerHTML = `${vnick} <span class="author">${getAuthor(KEEP.hexo_config.language)}</span>`
+                    }
+                  }
+                }
+                clearInterval(getValineDomTimer)
+              } else {
+                clearInterval(getValineDomTimer)
+              }
+            }, 2000)
+          }
+
+          if ('true' === 'true') {
+            const loadValineTimeout = setTimeout(() => {
+              loadValine()
+              clearTimeout(loadValineTimeout)
+            }, 1000)
+          } else {
+            window.addEventListener('DOMContentLoaded', loadValine)
+          }
+        </script>
+    </div>
+
+
+
+        
+    
+</div>
+
+                </div>
+            
+        </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E6%96%B9%E6%B3%95%E7%9A%84%E5%AE%9A%E4%B9%89%E5%92%8C%E4%BD%BF%E7%94%A8"><span class="nav-number">1.</span> <span class="nav-text">1. 方法的定义和使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%AE%9A%E4%B9%89%E6%96%B9%E6%B3%95%E7%9A%84%E8%AF%AD%E6%B3%95"><span class="nav-number">1.1.</span> <span class="nav-text">1. 定义方法的语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E8%AF%AD%E6%B3%95%E8%A7%A3%E6%9E%90"><span class="nav-number">1.2.</span> <span class="nav-text">2. 语法解析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%85%B3%E4%BA%8Estatic%E5%85%B3%E9%94%AE%E5%AD%97"><span class="nav-number">1.3.</span> <span class="nav-text">3. 关于static关键字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E5%AF%BC%E5%8C%85%E6%93%8D%E4%BD%9C"><span class="nav-number">1.4.</span> <span class="nav-text">4. 导包操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E7%A7%81%E6%9C%89%E6%96%B9%E6%B3%95%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">1.5.</span> <span class="nav-text">5. 私有方法的应用场景</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E9%80%92%E5%BD%92%E7%AE%97%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text">2. 递归算法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-%E6%96%B9%E6%B3%95%E7%9A%84%E9%87%8D%E8%BD%BD"><span class="nav-number">3.</span> <span class="nav-text">3. 方法的重载</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-java-lang-Math-C"><span class="nav-number">4.</span> <span class="nav-text">4. java.lang.Math[C]</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-%E6%9D%A1%E4%BB%B6%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5"><span class="nav-number">5.</span> <span class="nav-text">5. 条件分支语句</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5"><span class="nav-number">6.</span> <span class="nav-text">6. 循环语句</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-for%E5%BE%AA%E7%8E%AF"><span class="nav-number">6.1.</span> <span class="nav-text">1. for循环</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%9C%E4%B8%9A"><span class="nav-number">7.</span> <span class="nav-text">作业</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2023</span> -
+            
+            2023
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">Mu xingyu</a>
+            
+        </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="tools-item flex-center go-to-comments">
+                <i class="fas fa-comment"></i>
+                <span class="post-comments-count"></span>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/dark-light-toggle.js"></script>
+
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/local-search.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/code-block.js"></script>
+
+
+
+
+<div class="post-scripts pjax">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/post-helper.js"></script>
+        
+            <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/libs/anime.min.js"></script>
+        
+        
+            <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/toc.js"></script>
+        
+    
+</div>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
+
+
+
+</body>
+</html>

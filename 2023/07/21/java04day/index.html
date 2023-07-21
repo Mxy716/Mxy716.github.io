@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Mu xingyu">
+    
+    <title>
+        
+            java04day |
+        
+        mxy716
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/logo.svg">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/font/css/fontawesome.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/font/css/regular.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/font/css/solid.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/font/css/brands.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"en","path":"search.xml"}
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true},"style":{"primary_color":"#0066cc","logo":"/images/logo.svg","favicon":"/images/logo.svg","avatar":"/images/avatar.svg","font_size":"18px","font_family":null,"hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"header_transparent":true,"background_img":"/images/bg.svg","description":"千里之行始于足下.","font_color":"rgb(0, 102, 204)","hitokoto":true},"scroll":{"progress_bar":true,"percent":true}},"local_search":{"enable":true,"preload":true},"code_copy":{},"code_block":{"tools":{"enable":true,"style":"mac"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":true},"lazyload":{"enable":false},"comment":{"enable":true,"use":"valine","valine":{"appid":"kr4ZAGhMIpUEtmIU8DQWOIYv-gzGzoHsz","appkey":"Bo6FYYL2JmaBdonYYnnGEre4","server_urls":null,"placeholder":"请提出你的问题"},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":true,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":true,"wordcount":true,"min2read":true},"img_align":"left","copyright_info":false},"version":"3.6.1"}
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
+    KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
+    KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original article title","author":"Original article author","link":"Original article link"}
+  </script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <i class="pjax-progress-icon fas fa-circle-notch fa-spin"></i>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/logo.svg">
+                </a>
+            
+            <a class="logo-title" href="/">
+               mxy716
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                关于
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">关于</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation">java04day</span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/avatar.svg">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">Mu xingyu</span>
+                            
+                                <span class="author-label">Lv2</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2023-07-21 17:17:36</span>
+        <span class="mobile">2023-07-21 17:17</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2023-07-21 17:18:08</span>
+    </span>
+    
+    
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>2.2k Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>9 Mins</span>
+        </span>
+    
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                
+
+                <h1 id="1-continue和break语句"><a href="#1-continue和break语句" class="headerlink" title="1. continue和break语句"></a>1. continue和break语句</h1><ol>
+<li><p>学会使用debug - 调试代码的 - 单步调试</p>
+</li>
+<li><p>continue - 跳过本轮循环,但是会继续下一轮循环.  continue语句下面是不能够出现代码的.</p>
+<p>continue语句只能出现在循环体中.</p>
+</li>
+<li><p>break - 1.  打破循环,但是只能打破它所在的那一层循环.2. 跳出代码块 - 自命名&#x2F;switch块</p>
+</li>
+</ol>
+<hr>
+<p>自信题 - 输出2~199之间所有的质数&#x2F;素数,每输出7个换一行.</p>
+<p><code>质数- 一个数只能由1和它自己本身整除.</code></p>
+<h1 id="2-三元操作符"><a href="#2-三元操作符" class="headerlink" title="2. 三元操作符"></a>2. 三元操作符</h1><ol>
+<li><p>表达式?result1:result2</p>
+<p>简单替代if-else使用,表达式为true,则执行result1,否则执行result2</p>
+</li>
+<li><p>嵌套使用的 - 不推荐使用.</p>
+</li>
+</ol>
+<h1 id="3-switch块"><a href="#3-switch块" class="headerlink" title="3. switch块"></a>3. switch块</h1><p>隶属条件分支语句.语法如下:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span>(变量)&#123;</span><br><span class="line">  <span class="keyword">case</span> 具体值<span class="number">1</span>:</span><br><span class="line">    <span class="comment">//代码</span></span><br><span class="line">    [<span class="keyword">break</span>;]</span><br><span class="line">  <span class="keyword">case</span> 具体值<span class="number">2</span>:</span><br><span class="line">     <span class="comment">//代码</span></span><br><span class="line">     [<span class="keyword">break</span>;]</span><br><span class="line">  ...</span><br><span class="line">  [<span class="keyword">default</span>:</span><br><span class="line">  	 <span class="comment">//代码</span></span><br><span class="line">     [<span class="keyword">break</span>;]</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li><p>括号中可以允许的类型只能是<em><strong>byte,short,int,char</strong></em>,String[jdk7.x],enum(枚举类型,jdk5.x)以及Byte,Short,Integer,Character</p>
+</li>
+<li><p>括号中的变量的值如何能够匹配某个case后面的具体值,那么则进入到具体的case块中执行</p>
+<p><code>case后面的值不能够是表达式,比如n&gt;2,只能是具体的值</code></p>
+<ul>
+<li>如果case块中存在break语句,执行完毕之后,跳出switch块</li>
+<li>如果case块中不存在break语句,则会继续进入到下一个case块,直到遇到break,否则一直走到最后.</li>
+</ul>
+</li>
+<li><p>匹配不到任何值,则会进入到default,前提是提供了default</p>
+<p><code>default块的位置 - 任何位置,推荐放在末尾[break没有必要写]</code></p>
+</li>
+<li><p>jdk17对switch语法进行了升级.</p>
+</li>
+</ol>
+<hr>
+<p><code>能用switch-case解决的一定可以用if-else if-else去解决,后者的语法更加灵活 - 推荐后者的 - 后期代码的维护</code></p>
+<hr>
+<h1 id="4-while"><a href="#4-while" class="headerlink" title="4. while"></a>4. while</h1><p>和for一样,都是属于<em><strong>后置循环.</strong></em>  先判断条件是否成立,成立才会进入到循环体中去执行.</p>
+<p>语法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(条件表达式)&#123;</span><br><span class="line"> 	<span class="comment">//循环体 - 条件为true,否则跳出循环</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span>(<span class="literal">true</span>)&#123;死循环&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>while循环应用的场景 - 一个业务不知道循环多少次!但是知道循环退出的条件!</code></p>
+<p><code>自信题:给你一个数字,输出它的位数</code>,比如传入了一个数字435,返回3</p>
+<p><code>思路: 435/10 = 43 / 10 = 4 / 10 = 0</code></p>
+<h1 id="5-do-while"><a href="#5-do-while" class="headerlink" title="5. do-while"></a>5. do-while</h1><p>特点:属于<strong>前置循环</strong>,初始的时候,即使这个条件不成立,也会先进入到循环体中去执行一次.然后再进行条件的判断,成立则继续循环,否则退出.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">do</span>&#123;</span><br><span class="line">  <span class="comment">//循环体...</span></span><br><span class="line">&#125;<span class="keyword">while</span>(条件表达式);</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="6-循环练习"><a href="#6-循环练习" class="headerlink" title="6. 循环练习"></a>6. 循环练习</h1><p><img src="/2023/07/21/java04day/%E8%AF%95%E9%A2%98.jpg"> </p>
+<hr>
+<h1 id="7-数组的定义和使用"><a href="#7-数组的定义和使用" class="headerlink" title="7. 数组的定义和使用"></a>7. 数组的定义和使用</h1><h2 id="1-数组的介绍"><a href="#1-数组的介绍" class="headerlink" title="1. 数组的介绍"></a>1. 数组的介绍</h2><blockquote>
+<p>数据结构:数组,链表[单向和双向],树[二叉树,平衡二叉树,b树,b+树,红黑树],图,栈,队列…</p>
+<p>数组是java内存中用来存储一组同一类型的数据的”容器”,数组是有序的[允许通过下标进行访问].</p>
+</blockquote>
+<blockquote>
+<p><strong>数组也是属于对象类型</strong> - 数组本身是存在jvm的堆区.</p>
+</blockquote>
+<h2 id="2-定义数组的语法"><a href="#2-定义数组的语法" class="headerlink" title="2. 定义数组的语法"></a>2. 定义数组的语法</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">数据类型 变量名 = 初始值;</span><br><span class="line"></span><br><span class="line"><span class="comment">//注意:元素类型是数组中可以存储的数据的类型 </span></span><br><span class="line"><span class="comment">//允许是基本数据类型以及对象类型(比如String)</span></span><br><span class="line">元素类型[] 数组对象名 = <span class="keyword">new</span> 元素类型[数组长度];</span><br><span class="line">或者</span><br><span class="line">元素类型 数组对象名[] = <span class="keyword">new</span> 元素类型[数组长度];</span><br><span class="line"></span><br><span class="line">定义数组必不可少的俩个条件</span><br><span class="line"><span class="number">1.</span> 元素类型 - 决定了数组中可以存储数据的类型.</span><br><span class="line"><span class="number">2.</span> 数组的长度 - 决定了数组中存储数据的个数.</span><br><span class="line">  </span><br><span class="line"><span class="comment">//arr这个数组的类型是什么? - int[] - 整数型数组</span></span><br><span class="line"><span class="type">int</span>[] arr = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">3</span>];</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="3-关于数组的赋值"><a href="#3-关于数组的赋值" class="headerlink" title="3. 关于数组的赋值"></a>3. 关于数组的赋值</h2><blockquote>
+<p>如果仅仅是定义了数组,没有进行赋值的话,那么系统会根据元素类型来给定默认值.</p>
+<p>byte,short,int,long 默认值都是0</p>
+<p>float,double默认值都是0.0</p>
+<p>char默认值是’’,boolean默认值是false</p>
+<p><em><strong>对象类型默认值全部是null</strong></em></p>
+</blockquote>
+<ol>
+<li><p>先定义数组,然后通过下标一一赋值</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span>[] arr = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">3</span>];</span><br><span class="line">arr[<span class="number">0</span>] = <span class="number">10</span>;</span><br><span class="line">arr[<span class="number">1</span>] = <span class="number">20</span>;</span><br><span class="line">arr[<span class="number">2</span>] = <span class="number">30</span>;</span><br><span class="line"></span><br><span class="line">arr[<span class="number">3</span>] = <span class="number">50</span>;<span class="comment">//编译是Ok的,但是程序现在运行的过程中会抛出异常 - java.lang.ArrayIndexOutOfBoundsException数组下标越界异常</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>定义数组的时候,立即赋值</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">String[] arr = <span class="keyword">new</span> <span class="title class_">String</span>[]&#123;<span class="string">&quot;abc&quot;</span>,<span class="string">&quot;def&quot;</span>,<span class="string">&quot;123&quot;</span>&#125;;</span><br><span class="line">或者</span><br><span class="line"><span class="type">char</span>[] arr = &#123;<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;c&#x27;</span>&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>数组的属性 - length</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">数组对象.length =&gt; 获取数组的长度 - 数组中存储的数据的个数</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>通过普通for循环进行赋值</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span>[] arr = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">3</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>;i&lt;arr.length;i++)&#123;</span><br><span class="line">  arr[i] = (<span class="type">int</span>)(Math.random()*<span class="number">100</span>+<span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>通过数组工具类进行赋值</code></p>
+</li>
+</ol>
+<h2 id="4-数组的遍历"><a href="#4-数组的遍历" class="headerlink" title="4. 数组的遍历"></a>4. 数组的遍历</h2><ol>
+<li><p>通过下标一一遍历</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span>[] arr = &#123;<span class="number">1</span>,<span class="number">23</span>,<span class="number">3</span>&#125;;</span><br><span class="line">System.out.println(arr[<span class="number">0</span>]);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>通过普通for循环进行获取</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>;i&lt;arr.length;i++)&#123;</span><br><span class="line">  System.out.println(arr[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>通过增强for循环 - jdk5.0开始提供的 - <strong>底层是迭代器</strong></p>
+<p><code>只读for</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(元素类型 变量:数组对象名)&#123;</span><br><span class="line">  <span class="comment">//输出这个变量</span></span><br><span class="line">  <span class="comment">//此处的变量不是下标 - 就是数组中的当前元素</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> e:arr)&#123;</span><br><span class="line">  System.out.println(e);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>通过数组工具类进行遍历</p>
+<p>java.util.Arrays - 提供了大量的操作数组的方法.</p>
+<p>static String toString(int[] arr);</p>
+</li>
+<li><p>自定义数组输出的方式.</p>
+</li>
+</ol>
+<hr>
+<h1 id="8-数组的底层"><a href="#8-数组的底层" class="headerlink" title="8. 数组的底层"></a>8. 数组的底层</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span>[] arr1 = <span class="keyword">new</span> <span class="title class_">int</span>[]&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span>[] arr2 = &#123;<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>&#125;;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> tech.aistar.day04;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 本来用来演示: 数组在jvm内存中的形式</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> success</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2023/7/20 15:11:02</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ArrayMemoryDemo</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">//①通过new关键字,会在堆中开辟一个区域,申请空间</span></span><br><span class="line">        <span class="comment">//②然后给这个对象进行初始化</span></span><br><span class="line">        <span class="comment">//③将这个对象在堆空间中的内存地址赋值给了一个引用变量arr1,然后存储在栈区</span></span><br><span class="line">        <span class="type">int</span>[] arr1 = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;;</span><br><span class="line">        System.out.println(arr1);<span class="comment">//[I@7ad041f3</span></span><br><span class="line"></span><br><span class="line">        <span class="type">int</span>[] arr2 = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;;</span><br><span class="line">        System.out.println(arr2);<span class="comment">//[I@251a69d7</span></span><br><span class="line">        <span class="comment">//==在java中永远永远比较的值</span></span><br><span class="line">        System.out.println(arr1 == arr2);<span class="comment">//false</span></span><br><span class="line"></span><br><span class="line">        System.out.println(Arrays.equals(arr1,arr2));<span class="comment">//true</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//TODO... char类型数组比较特殊一点</span></span><br><span class="line">        <span class="type">char</span>[] crr = &#123;<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;c&#x27;</span>&#125;;</span><br><span class="line">        System.out.println(crr);<span class="comment">//abc</span></span><br><span class="line">        System.out.println(<span class="string">&quot;&quot;</span>+crr);<span class="comment">//[C@251a69d7</span></span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">&quot;====引用和对象之间的关系 - 提前学习 - 种子====&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//创建了一个数组对象arr3 =&gt; 认为arr3是对象的名称   =&gt; 这句话是不对的</span></span><br><span class="line">        <span class="comment">//因为arr3仅仅是这个数组对象的引用而已.</span></span><br><span class="line">        <span class="type">int</span>[] arr3 = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//引用和对象之间是一个什么关系呢?</span></span><br><span class="line">        <span class="comment">//引用里面保存的就是对象在堆空间中的内存地址.</span></span><br><span class="line">        <span class="comment">//引用和对象之间的映射关系 - 符合&quot;气球🎈理论&quot;</span></span><br><span class="line">        <span class="comment">//1. 一个引用在某个时刻只能指向一个对象</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//2. 一个对象在某个时刻可以被多个引用指向.</span></span><br><span class="line">        <span class="type">int</span>[] arr4 = arr3;</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">&quot;=======垃圾对象 - 没有任何引用指向的对象=========&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="type">int</span>[] arr5 = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;;</span><br><span class="line">        <span class="comment">//arr5重新赋值了 - null,代表arr5已经不再指向原来的对象&#123;1,2,3&#125;</span></span><br><span class="line">        <span class="comment">//&#123;1,2,3&#125;这对象已经没有任何引用指向了 -&gt; 垃圾对象 =&gt; 等待GC回收</span></span><br><span class="line">        <span class="comment">//int[] arr6 = arr5;</span></span><br><span class="line">        arr5 = <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//System.out.println(Arrays.toString(arr6));</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="9-方法的参数的传递方式"><a href="#9-方法的参数的传递方式" class="headerlink" title="9. 方法的参数的传递方式"></a>9. 方法的参数的传递方式</h1><p><code>面试官希望得到的答案</code></p>
+<ol>
+<li><strong>基本类型采用值传递</strong> - 将变量中保存的基本类型的数据拷贝一份给方法的形参.</li>
+<li><strong>对象类型采用地址传递&#x2F;引用传递</strong> - 将引用变量保存的对象的内存地址拷贝一份给方法的形参.</li>
+</ol>
+<p><code>字符串String虽然是对象类型,但是具备值传递的特点的</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">main:</span><br><span class="line">  <span class="type">String</span> <span class="variable">s</span> <span class="operator">=</span> <span class="string">&quot;good&quot;</span>;</span><br><span class="line">  change(s);</span><br><span class="line">  打印s good</span><br><span class="line">    </span><br><span class="line">change:</span><br><span class="line">  s = <span class="string">&quot;test&quot;</span>;</span><br><span class="line">  打印s =&gt; test</span><br></pre></td></tr></table></figure>
+
+<hr>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span>&#123;</span><br><span class="line">  <span class="type">String</span> <span class="variable">str</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">&quot;good&quot;</span>);<span class="comment">//对象类型-但是具备值传递的特点的</span></span><br><span class="line">  </span><br><span class="line">  <span class="type">char</span>[] ch = &#123;<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;c&#x27;</span>&#125;;<span class="comment">//对象类型</span></span><br><span class="line">  </span><br><span class="line">  change(str,ch);</span><br><span class="line">  </span><br><span class="line">  <span class="comment">//str=&gt; good</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment">//ch &#123;&#x27;g&#x27;,&#x27;b&#x27;,&#x27;c&#x27;&#125;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">change</span><span class="params">(String str,<span class="type">char</span>[] ch)</span>&#123;</span><br><span class="line">  str = <span class="string">&quot;test ok&quot;</span>;</span><br><span class="line">  ch[<span class="number">0</span>] = <span class="string">&#x27;g&#x27;</span></span><br><span class="line">    </span><br><span class="line">  <span class="comment">//打印str =&gt; &quot;test ok&quot;</span></span><br><span class="line">    <span class="comment">//ch =&gt; gbc</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p><code>最正确的理论 - Java中只有值传递</code></p>
+<hr>
+<h1 id="10-作业"><a href="#10-作业" class="headerlink" title="10. 作业"></a>10. 作业</h1><ol>
+<li><p>while循环实现俩个数的最大公约数.</p>
+</li>
+<li><p>while实现十进制转成二进制,比如5&#x3D;&gt;101,10&#x3D;&gt;1010</p>
+</li>
+<li><p>给定一个数字,然后逆序输出.比如12345,输出54321</p>
+</li>
+<li><p>双色球案例</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">比如定义一个数组-长度是<span class="number">5.</span></span><br><span class="line">然后通过普通<span class="keyword">for</span>循环对数组进行赋值,值的范围[<span class="number">1</span>,<span class="number">6</span>]之间的随机整数.</span><br><span class="line">要求是最终的数组中不能出现重复的数据.</span><br></pre></td></tr></table></figure></li>
+</ol>
+<hr>
+
+            </div>
+
+            
+
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                               rel="prev"
+                               href="/2023/07/21/java05day/"
+                            >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                                <span class="title flex-center">
+                                <span class="post-nav-title-item">java05day</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/2023/07/21/java03day/"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">java03day</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+                <div class="comment-container">
+                    
+<div class="comments-container">
+    <div id="comments-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fas fa-comments"></i>&nbsp;Comments
+    </div>
+    
+        
+            
+
+    <div class="valine-container">
+        <script data-pjax src="//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script>
+        <div id="vcomments"></div>
+        <script data-pjax>
+          function loadValine() {
+
+            const config = {
+              el: '#vcomments',
+              appId: 'kr4ZAGhMIpUEtmIU8DQWOIYv-gzGzoHsz',
+              appKey: 'Bo6FYYL2JmaBdonYYnnGEre4',
+              meta: ['nick', 'mail', 'link'],
+              avatar: 'wavatar',
+              enableQQ: true,
+              placeholder: '请提出你的问题',
+              lang: 'en'.toLowerCase()
+            }
+
+            if ('') {
+              config.serverURLs = ''
+            }
+
+            new Valine(config)
+
+            function getAuthor(language) {
+              switch (language) {
+                case 'en':
+                  return 'Author'
+                case 'zh-CN':
+                  return '博主'
+                default:
+                  return 'Master'
+              }
+            }
+
+            // Add "Author" identify
+            const getValineDomTimer = setInterval(() => {
+              const vcards = document.querySelectorAll('#vcomments .vcards .vcard')
+              if (vcards.length > 0) {
+                let author = 'Mu xingyu'
+
+                if (author) {
+                  for (let vcard of vcards) {
+                    const vnick_dom = vcard.querySelector('.vhead .vnick')
+                    const vnick = vnick_dom.innerHTML
+                    if (vnick === author) {
+                      vnick_dom.innerHTML = `${vnick} <span class="author">${getAuthor(KEEP.hexo_config.language)}</span>`
+                    }
+                  }
+                }
+                clearInterval(getValineDomTimer)
+              } else {
+                clearInterval(getValineDomTimer)
+              }
+            }, 2000)
+          }
+
+          if ('true' === 'true') {
+            const loadValineTimeout = setTimeout(() => {
+              loadValine()
+              clearTimeout(loadValineTimeout)
+            }, 1000)
+          } else {
+            window.addEventListener('DOMContentLoaded', loadValine)
+          }
+        </script>
+    </div>
+
+
+
+        
+    
+</div>
+
+                </div>
+            
+        </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-continue%E5%92%8Cbreak%E8%AF%AD%E5%8F%A5"><span class="nav-number">1.</span> <span class="nav-text">1. continue和break语句</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E4%B8%89%E5%85%83%E6%93%8D%E4%BD%9C%E7%AC%A6"><span class="nav-number">2.</span> <span class="nav-text">2. 三元操作符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-switch%E5%9D%97"><span class="nav-number">3.</span> <span class="nav-text">3. switch块</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-while"><span class="nav-number">4.</span> <span class="nav-text">4. while</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-do-while"><span class="nav-number">5.</span> <span class="nav-text">5. do-while</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-%E5%BE%AA%E7%8E%AF%E7%BB%83%E4%B9%A0"><span class="nav-number">6.</span> <span class="nav-text">6. 循环练习</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-%E6%95%B0%E7%BB%84%E7%9A%84%E5%AE%9A%E4%B9%89%E5%92%8C%E4%BD%BF%E7%94%A8"><span class="nav-number">7.</span> <span class="nav-text">7. 数组的定义和使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E6%95%B0%E7%BB%84%E7%9A%84%E4%BB%8B%E7%BB%8D"><span class="nav-number">7.1.</span> <span class="nav-text">1. 数组的介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E5%AE%9A%E4%B9%89%E6%95%B0%E7%BB%84%E7%9A%84%E8%AF%AD%E6%B3%95"><span class="nav-number">7.2.</span> <span class="nav-text">2. 定义数组的语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%85%B3%E4%BA%8E%E6%95%B0%E7%BB%84%E7%9A%84%E8%B5%8B%E5%80%BC"><span class="nav-number">7.3.</span> <span class="nav-text">3. 关于数组的赋值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E6%95%B0%E7%BB%84%E7%9A%84%E9%81%8D%E5%8E%86"><span class="nav-number">7.4.</span> <span class="nav-text">4. 数组的遍历</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#8-%E6%95%B0%E7%BB%84%E7%9A%84%E5%BA%95%E5%B1%82"><span class="nav-number">8.</span> <span class="nav-text">8. 数组的底层</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#9-%E6%96%B9%E6%B3%95%E7%9A%84%E5%8F%82%E6%95%B0%E7%9A%84%E4%BC%A0%E9%80%92%E6%96%B9%E5%BC%8F"><span class="nav-number">9.</span> <span class="nav-text">9. 方法的参数的传递方式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#10-%E4%BD%9C%E4%B8%9A"><span class="nav-number">10.</span> <span class="nav-text">10. 作业</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2023</span> -
+            
+            2023
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">Mu xingyu</a>
+            
+        </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="tools-item flex-center go-to-comments">
+                <i class="fas fa-comment"></i>
+                <span class="post-comments-count"></span>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/dark-light-toggle.js"></script>
+
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/local-search.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/code-block.js"></script>
+
+
+
+
+<div class="post-scripts pjax">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/post-helper.js"></script>
+        
+            <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/libs/anime.min.js"></script>
+        
+        
+            <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/toc.js"></script>
+        
+    
+</div>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
+
+
+
+</body>
+</html>
